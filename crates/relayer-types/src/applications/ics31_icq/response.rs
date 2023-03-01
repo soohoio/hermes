@@ -2,14 +2,14 @@ use crate::applications::ics31_icq::error::Error;
 use crate::signer::Signer;
 
 use ibc_proto::google::protobuf::Any;
-use ibc_proto::stride::interchainquery::v1::MsgSubmitQueryResponse;
+use ibc_proto::stayking::interchainquery::v1::MsgSubmitQueryResponse;
 use prost::Message;
 use std::prelude::v1::*;
 use std::vec;
 use tendermint::merkle::proof::ProofOps as TendermintProofOps;
 use tendermint_proto::crypto::{ProofOp, ProofOps};
 
-pub const TYPE_URL: &str = "/stride.interchainquery.v1.MsgSubmitQueryResponse";
+pub const TYPE_URL: &str = "/stayking.interchainquery.v1.MsgSubmitQueryResponse";
 
 #[derive(Clone, Debug, PartialEq, Eq)]
 pub struct CrossChainQueryResponse {
