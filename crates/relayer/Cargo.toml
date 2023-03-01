@@ -21,7 +21,7 @@ profiling = []
 telemetry = ["ibc-telemetry"]
 
 [dependencies]
-ibc-proto         = { git="https://github.com/soohoio/ibc-proto-rs.git", branch="release/stayking/v1.0.0" }
+ibc-proto         = { git="https://github.com/soohoio/ibc-proto-rs.git", branch="main" }
 ibc-telemetry     = { version = "0.22.0", path = "../telemetry", optional = true }
 ibc-relayer-types = { version = "0.22.0", path = "../relayer-types", features = ["mocks"] }
 

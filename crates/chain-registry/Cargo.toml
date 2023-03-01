@@ -12,7 +12,7 @@ description  = """
 """
 
 [dependencies]
-ibc-proto         = { git="https://github.com/soohoio/ibc-proto-rs.git", branch="release/stayking/v1.0.0" }
+ibc-proto         = { git="https://github.com/soohoio/ibc-proto-rs.git", branch="main" }
 ibc-relayer-types = { version = "0.22.0", path = "../relayer-types", features = ["std"] }
 tendermint-rpc    = { version = "0.28.0", features = ["http-client", "websocket-client"] }
 
