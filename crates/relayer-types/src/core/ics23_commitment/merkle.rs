@@ -35,7 +35,7 @@ pub struct MerkleProof {
 
 /// Convert to ics23::CommitmentProof
 /// The encoding and decoding shouldn't fail since ics23::CommitmentProof and ibc_proto::ics23::CommitmentProof should be the same
-/// Ref. <https://github.com/cosmos/ibc-proto-rs/issues/10>
+/// Ref. <https://github.com/soohoio/ibc-proto-rs/issues/10>
 impl From<RawMerkleProof> for MerkleProof {
     fn from(proof: RawMerkleProof) -> Self {
         let proofs: Vec<CommitmentProof> = proof

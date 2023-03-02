@@ -864,7 +864,7 @@ Special thanks to external contributors for this release: @CharlyCst ([#347], [#
 [#415]: https://github.com/informalsystems/ibc-rs/issues/415
 [#428]: https://github.com/informalsystems/ibc-rs/issues/428
 [changelog]: https://github.com/informalsystems/ibc-rs/tree/master/CHANGELOG.md
-[proto-compiler]: https://github.com/cosmos/ibc-proto-rs/tree/main/tools/proto-compiler
+[proto-compiler]: https://github.com/soohoio/ibc-proto-rs/tree/main/tools/proto-compiler
 
 ## v0.0.4
 *October 19, 2020*
@@ -959,7 +959,7 @@ Additional highlights:
 [#300]: https://github.com/informalsystems/ibc-rs/issues/300
 [#302]: https://github.com/informalsystems/ibc-rs/issues/302
 [#308]: https://github.com/informalsystems/ibc-rs/issues/308
-[ibc-proto]: https://github.com/cosmos/ibc-proto-rs
+[ibc-proto]: https://github.com/soohoio/ibc-proto-rs
 [disclosure-log]: https://github.com/informalsystems/ibc-rs/blob/master/docs/disclosure-log.md
 [spec/connection-handshake]: https://github.com/informalsystems/ibc-rs/tree/master/docs/spec/connection-handshake
 [ibc-relayer]: https://github.com/informalsystems/hermes/tree/master/crates/relayer

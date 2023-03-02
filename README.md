@@ -112,7 +112,7 @@ Unless required by applicable law or agreed to in writing, software distributed 
 [ibc-chain-registry-docs-link]: https://docs.rs/ibc-chain-registry/
 <!-- markdown-link-check-enabled -->
 [ibc-rs-repo]: https://github.com/cosmos/ibc-rs
-[ibc-proto-rs-repo]: https://github.com/cosmos/ibc-proto-rs
+[ibc-proto-rs-repo]: https://github.com/soohoio/ibc-proto-rs
 
 [build-image]: https://github.com/informalsystems/hermes/workflows/Rust/badge.svg
 [build-link]: https://github.com/informalsystems/hermes/actions?query=workflow%3ARust

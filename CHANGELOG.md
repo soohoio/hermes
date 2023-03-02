@@ -199,7 +199,7 @@ Please reach out to us if you encounter any issue following from
 this reorganization of the repository.
 
 [ibc]: https://github.com/cosmos/ibc-rs
-[ibc-proto]: https://github.com/cosmos/ibc-proto-rs
+[ibc-proto]: https://github.com/soohoio/ibc-proto-rs
 [cosmos]: https://github.com/cosmos
 [split-tweet]: https://twitter.com/informalinc/status/1578120684508692481
 [split-issue]: https://github.com/informalsystems/hermes/issues/2639
@@ -385,7 +385,7 @@ v1.0.0-rc.2, v1.0.0-rc.1 and v1.0.0-rc.0.
 
 - Release version 1.0.0 of Hermes (`ibc-relayer-cli`)
 
-### IBC Proto - [`ibc-proto`](https://github.com/cosmos/ibc-proto-rs) (v0.20.0)
+### IBC Proto - [`ibc-proto`](https://github.com/soohoio/ibc-proto-rs) (v0.20.0)
 
 - Release version 0.20.1 of `ibc-proto`
 
@@ -485,7 +485,7 @@ This is the third release candidate for Hermes v1.0.0 🎉
 
 - Release version 1.0.0-rc.2 of Hermes (`ibc-relayer-cli`)
 
-### IBC Proto - [`ibc-proto`](https://github.com/cosmos/ibc-proto-rs) (v0.20.0)
+### IBC Proto - [`ibc-proto`](https://github.com/soohoio/ibc-proto-rs) (v0.20.0)
 
 - Release version 0.20.0 of `ibc-proto`
 
@@ -614,12 +614,12 @@ This is the second release candidate for Hermes v1.0.0 🎉
   ([#2431](https://github.com/informalsystems/hermes/issues/2431))
 
 
-### IBC Proto - [`ibc-proto`](https://github.com/cosmos/ibc-proto-rs) (v0.19.1)
+### IBC Proto - [`ibc-proto`](https://github.com/soohoio/ibc-proto-rs) (v0.19.1)
 
 #### IMPROVEMENTS
 
 - Update Protobuf definitions for IBC-Go to v4.0.0-rc0 and Cosmos SDK to v0.45.6
-  ([#1](https://github.com/cosmos/ibc-proto-rs/issues/1))
+  ([#1](https://github.com/soohoio/ibc-proto-rs/issues/1))
 
 
 ### IBC Modules - [`ibc`](https://github.com/cosmos/ibc-rs) (v0.17.0)
@@ -739,7 +739,7 @@ eg. feature, bug fix, etc.
 - Added `--yes` flag to the `create channel` flow to enable skipping the
   `--new-client-connection` step ([#2317](https://github.com/informalsystems/hermes/issues/2317))
 
-### IBC Proto - [`ibc-proto`](https://github.com/cosmos/ibc-proto-rs) (v0.19.0)
+### IBC Proto - [`ibc-proto`](https://github.com/soohoio/ibc-proto-rs) (v0.19.0)
 
 #### FEATURES
 
@@ -1026,15 +1026,15 @@ This information can also be found in the [Hermes guide][guide-ica].
 
 ### FEATURES
 
-- [IBC Proto](https://github.com/cosmos/ibc-proto-rs)
-  - Add CosmWasm support to the generated Protobuf code ([#4](https://github.com/cosmos/ibc-proto-rs/issues/4))
+- [IBC Proto](https://github.com/soohoio/ibc-proto-rs)
+  - Add CosmWasm support to the generated Protobuf code ([#4](https://github.com/soohoio/ibc-proto-rs/issues/4))
     * Add a new `client` feature to gate the tonic client code, implies the `std` feature.
     * Add a new `json-schema` feature to derive `schemars::JsonSchema` on some proto types, implies the `std` feature.
     * Add `#[serde(default)]` to fields that might be omitted by Golang `omitempty` directive.
     * Change serialization of byte arrays to Base64 for compatibility with Go.
   - Derive `Serialize` and `Deserialize` for `ibc-proto::ibc::core` and `ibc_proto::ibc::applications` structs,
     and switch to Google's Protobuf standard types instead of Prost's types.
-    ([#3](https://github.com/cosmos/ibc-proto-rs/issues/3))
+    ([#3](https://github.com/soohoio/ibc-proto-rs/issues/3))
 - [Relayer Library](crates/relayer)
   - Added caching layer for hermes start command
     ([#1908](https://github.com/informalsystems/hermes/issues/1908))
@@ -1098,7 +1098,7 @@ has been added for clearing packets in both direction on a given channel.
 
 - General
   - Upgrade protos and compatibility to IBC v3.0.0-rc.0 and Cosmos SDK v0.45.1
-    ([#5](https://github.com/cosmos/ibc-proto-rs/issues/5))
+    ([#5](https://github.com/soohoio/ibc-proto-rs/issues/5))
 - [Relayer CLI](crates/relayer-cli)
   - Allow overriding the tracing filter with `RUST_LOG` environment variable
     ([#1895](https://github.com/informalsystems/hermes/issues/1895))
@@ -2140,7 +2140,7 @@ and periodically refresh IBC clients. The relayer now also supports [ICS 027 (In
 [#811]: https://github.com/informalsystems/hermes/issues/811
 [#840]: https://github.com/informalsystems/hermes/issues/840
 [#851]: https://github.com/informalsystems/hermes/issues/851
-[#9]: https://github.com/cosmos/ibc-proto-rs/issues/9
+[#9]: https://github.com/soohoio/ibc-proto-rs/issues/9
 [#862]: https://github.com/informalsystems/hermes/issues/862
 [#863]: https://github.com/informalsystems/hermes/issues/863
 [#869]: https://github.com/informalsystems/hermes/issues/869
@@ -2264,7 +2264,7 @@ This release also finalizes the initial implementation of all the ICS 004 handle
 [#770]: https://github.com/informalsystems/hermes/issues/770
 [#793]: https://github.com/informalsystems/hermes/pull/793
 [#798]: https://github.com/informalsystems/hermes/issues/798
-[#11]: https://github.com/cosmos/ibc-proto-rs/issues/11
+[#11]: https://github.com/soohoio/ibc-proto-rs/issues/11
 [#805]: https://github.com/informalsystems/hermes/issues/805
 [#806]: https://github.com/informalsystems/hermes/issues/806
 [#809]: https://github.com/informalsystems/hermes/issues/809
@@ -2469,7 +2469,7 @@ the latest cosmos proto versions from `v0.40.0-rc5` (sometimes called 'stargate-
 [#381]: https://github.com/informalsystems/hermes/issues/381
 [#443]: https://github.com/informalsystems/hermes/issues/443
 [#447]: https://github.com/informalsystems/hermes/issues/447
-[#12]: https://github.com/cosmos/ibc-proto-rs/issues/12
+[#12]: https://github.com/soohoio/ibc-proto-rs/issues/12
 [#468]: https://github.com/informalsystems/hermes/issues/468
 
 
@@ -2543,7 +2543,7 @@ Special thanks to external contributors for this release: @CharlyCst ([#102], [#
 [#332]: https://github.com/informalsystems/hermes/issues/332
 [#335]: https://github.com/informalsystems/hermes/pull/335
 [#336]: https://github.com/informalsystems/hermes/issues/336
-[#18]: https://github.com/cosmos/ibc-proto-rs/issues/18
+[#18]: https://github.com/soohoio/ibc-proto-rs/issues/18
 [#103]: https://github.com/cosmos/ibc-rs/issues/103
 [#346]: https://github.com/informalsystems/hermes/issues/346
 [#102]: https://github.com/cosmos/ibc-rs/issues/102
@@ -2552,7 +2552,7 @@ Special thanks to external contributors for this release: @CharlyCst ([#102], [#
 [#359]: https://github.com/informalsystems/hermes/issues/359
 [#360]: https://github.com/informalsystems/hermes/issues/360
 [#363]: https://github.com/informalsystems/hermes/issues/363
-[#17]: https://github.com/cosmos/ibc-proto-rs/issues/17
+[#17]: https://github.com/soohoio/ibc-proto-rs/issues/17
 [#367]: https://github.com/informalsystems/hermes/issues/367
 [#368]: https://github.com/informalsystems/hermes/issues/368
 [#369]: https://github.com/informalsystems/hermes/pull/369
@@ -2572,7 +2572,7 @@ Special thanks to external contributors for this release: @CharlyCst ([#102], [#
 [#415]: https://github.com/informalsystems/hermes/issues/415
 [#428]: https://github.com/informalsystems/hermes/issues/428
 [changelog]: https://github.com/informalsystems/hermes/blob/master/CHANGELOG.md
-[proto-compiler]: https://github.com/cosmos/ibc-proto-rs/tree/main/tools/proto-compiler
+[proto-compiler]: https://github.com/soohoio/ibc-proto-rs/tree/main/tools/proto-compiler
 
 ## v0.0.4
 *October 19, 2020*
@@ -2625,8 +2625,8 @@ Additional highlights:
 
 [#90]: https://github.com/informalsystems/hermes/issues/90
 [#124]: https://github.com/informalsystems/hermes/issues/124
-[#23]: https://github.com/cosmos/ibc-proto-rs/issues/23
-[#21]: https://github.com/cosmos/ibc-proto-rs/issues/21
+[#23]: https://github.com/soohoio/ibc-proto-rs/issues/23
+[#21]: https://github.com/soohoio/ibc-proto-rs/issues/21
 [#129]: https://github.com/cosmos/ibc-rs/issues/129
 [#128]: https://github.com/cosmos/ibc-rs/issues/128
 [#127]: https://github.com/cosmos/ibc-rs/issues/127
@@ -2667,7 +2667,7 @@ Additional highlights:
 [#300]: https://github.com/informalsystems/hermes/issues/300
 [#108]: https://github.com/cosmos/ibc-rs/issues/108
 [#106]: https://github.com/cosmos/ibc-rs/issues/106
-[ibc-proto]: https://github.com/cosmos/ibc-proto-rs
+[ibc-proto]: https://github.com/soohoio/ibc-proto-rs
 [disclosure-log]: https://github.com/informalsystems/hermes/blob/master/docs/disclosure-log.md
 [spec/connection-handshake]: https://github.com/informalsystems/hermes/tree/master/docs/spec/connection-handshake
 [ibc-relayer]: https://github.com/informalsystems/hermes/tree/master/crates/relayer
