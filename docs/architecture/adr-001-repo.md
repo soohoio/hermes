@@ -145,7 +145,7 @@ impl From<ChannelEnd> for RawChannel {
 }
 ```
 
-This issue [#130](https://github.com/informalsystems/hermes/issues/130) is a good starting place for more context
+This issue [#130](https://github.com/soohoio/hermes/issues/130) is a good starting place for more context
 on `ibc-proto`.
 
 ### References

@@ -1,3 +1,3 @@
 - Removed `gm` folder and its contents
 - Updated the guide to reflect the new repo
-- ([#2754](https://github.com/informalsystems/hermes/issues/2754))
+- ([#2754](https://github.com/soohoio/hermes/issues/2754))

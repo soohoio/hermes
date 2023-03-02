@@ -163,7 +163,7 @@ impl Application for CliApp {
                 eprintln!(
                     "Please see the example configuration for detailed information about the \
                     supported configuration options: \
-                    https://github.com/informalsystems/hermes/blob/master/config.toml"
+                    https://github.com/soohoio/hermes/blob/master/config.toml"
                 );
                 std::process::exit(1);
             })

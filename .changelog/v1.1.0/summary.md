@@ -20,5 +20,5 @@ this reorganization of the repository.
 [ibc-proto]: https://github.com/soohoio/ibc-proto-rs
 [cosmos]: https://github.com/cosmos
 [split-tweet]: https://twitter.com/informalinc/status/1578120684508692481
-[split-issue]: https://github.com/informalsystems/hermes/issues/2639
+[split-issue]: https://github.com/soohoio/hermes/issues/2639
 
