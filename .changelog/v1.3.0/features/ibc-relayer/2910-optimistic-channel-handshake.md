@@ -1,2 +1,2 @@
 - Enable optimistic channel handshake
-  ([#2910](https://github.com/informalsystems/hermes/issues/2910))
+  ([#2910](https://github.com/soohoio/hermes/issues/2910))

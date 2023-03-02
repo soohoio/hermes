@@ -2,4 +2,4 @@
   is too low.
   Added integration tests for client upgrade.
   ([#2312](https://github.com/informalsystems/ibc-rs/issues/2312))
-  ([#2781](https://github.com/informalsystems/hermes/issues/2781))
+  ([#2781](https://github.com/soohoio/hermes/issues/2781))

@@ -631,9 +631,9 @@ impl GrpcStatusSubdetail {
     /// This error may happen even when packets are submitted in order when the `simulate_tx`
     /// gRPC endpoint is allowed to be called after a block is created and before
     /// Tendermint/mempool finishes `recheck_tx`, similary to the issue described in
-    /// <https://github.com/informalsystems/hermes/issues/2249>.
+    /// <https://github.com/soohoio/hermes/issues/2249>.
     ///
-    /// See <https://github.com/informalsystems/hermes/issues/2670> for more info.
+    /// See <https://github.com/soohoio/hermes/issues/2670> for more info.
     pub fn is_out_of_order_packet_sequence_error(&self) -> bool {
         self.status
             .message()
@@ -652,7 +652,7 @@ impl GrpcStatusSubdetail {
     /// If it evaluates to true then the error is ignored and the transaction that caused this
     /// simulation error is still sent to mempool with `broadcast_tx_sync` allowing for potential
     /// recovery after mempool's `recheckTxs` step.
-    /// More details in <https://github.com/informalsystems/hermes/issues/2249>
+    /// More details in <https://github.com/soohoio/hermes/issues/2249>
     pub fn is_account_sequence_mismatch_that_can_be_ignored(&self) -> bool {
         match parse_sequences_in_mismatch_error_message(self.status.message()) {
             None => false,

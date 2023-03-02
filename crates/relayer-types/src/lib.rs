@@ -1,5 +1,5 @@
 // TODO: disable unwraps:
-// https://github.com/informalsystems/hermes/issues/987
+// https://github.com/soohoio/hermes/issues/987
 // #![cfg_attr(not(test), deny(clippy::unwrap_used))]
 
 #![no_std]
@@ -42,7 +42,7 @@
 //! [applications]: https://github.com/cosmos/ibc-rs/tree/main/crates/ibc/src/applications
 //! [ics-standards]: https://github.com/cosmos/ibc#interchain-standards
 //! [relayer]: https://github.com/cosmos/ibc-rs/tree/main/crates/ibc/src/relayer
-//! [relayer-repo]: https://github.com/informalsystems/hermes/tree/master/crates/relayer
+//! [relayer-repo]: https://github.com/soohoio/hermes/tree/master/crates/relayer
 
 extern crate alloc;
 

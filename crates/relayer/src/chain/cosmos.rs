@@ -2080,7 +2080,7 @@ mod tests {
         assert_eq!(super::mul_ceil(340_001, 0.001), 341.into());
     }
 
-    /// Before https://github.com/informalsystems/hermes/pull/1568,
+    /// Before https://github.com/soohoio/hermes/pull/1568,
     /// this test would have panic'ed with:
     ///
     /// thread 'chain::cosmos::tests::fee_overflow' panicked at 'attempt to multiply with overflow'

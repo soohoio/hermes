@@ -1,1 +1,1 @@
-git clone https://github.com/informalsystems/hermes.git
+git clone https://github.com/soohoio/hermes.git

@@ -624,7 +624,7 @@ involving packet acks in a 3-chain setup. More details below.
 [#682]: https://github.com/informalsystems/ibc-rs/issues/682
 
 [ibc]: https://github.com/cosmos/ibc-rs
-[ibc-relayer-cli]: https://github.com/informalsystems/hermes/tree/master/crates/relayer-cli
+[ibc-relayer-cli]: https://github.com/soohoio/hermes/tree/master/crates/relayer-cli
 
 ## v0.1.0
 *February 4, 2021*
@@ -864,7 +864,7 @@ Special thanks to external contributors for this release: @CharlyCst ([#347], [#
 [#415]: https://github.com/informalsystems/ibc-rs/issues/415
 [#428]: https://github.com/informalsystems/ibc-rs/issues/428
 [changelog]: https://github.com/informalsystems/ibc-rs/tree/master/CHANGELOG.md
-[proto-compiler]: https://github.com/cosmos/ibc-proto-rs/tree/main/tools/proto-compiler
+[proto-compiler]: https://github.com/soohoio/ibc-proto-rs/tree/main/tools/proto-compiler
 
 ## v0.0.4
 *October 19, 2020*
@@ -959,10 +959,10 @@ Additional highlights:
 [#300]: https://github.com/informalsystems/ibc-rs/issues/300
 [#302]: https://github.com/informalsystems/ibc-rs/issues/302
 [#308]: https://github.com/informalsystems/ibc-rs/issues/308
-[ibc-proto]: https://github.com/cosmos/ibc-proto-rs
+[ibc-proto]: https://github.com/soohoio/ibc-proto-rs
 [disclosure-log]: https://github.com/informalsystems/ibc-rs/blob/master/docs/disclosure-log.md
 [spec/connection-handshake]: https://github.com/informalsystems/ibc-rs/tree/master/docs/spec/connection-handshake
-[ibc-relayer]: https://github.com/informalsystems/hermes/tree/master/crates/relayer
+[ibc-relayer]: https://github.com/soohoio/hermes/tree/master/crates/relayer
 
 ## v0.0.3
 *September 1, 2020*
@@ -1009,7 +1009,7 @@ Other highlights:
 [#193]: https://github.com/informalsystems/ibc-rs/issues/193
 [ibc/ics04]: https://github.com/cosmos/ibc-rs/tree/main/crates/ibc/src/core/ics04_channel
 [#192]: https://github.com/informalsystems/ibc-rs/issues/192
-[ibc-relayer-cli]: https://github.com/informalsystems/hermes/tree/master/crates/relayer-cli
+[ibc-relayer-cli]: https://github.com/soohoio/hermes/tree/master/crates/relayer-cli
 [architecture/FSM-1]: https://github.com/informalsystems/ibc-rs/blob/v0.1.0/docs/architecture/fsm-async-connection.md
 [#122]: https://github.com/informalsystems/ibc-rs/issues/122
 [architecture/ADR-003]: https://github.com/informalsystems/ibc-rs/blob/master/docs/architecture/adr-003-handler-implementation.md

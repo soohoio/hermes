@@ -947,7 +947,7 @@ impl<DstChain: ChainHandle, SrcChain: ChainHandle> ForeignClient<DstChain, SrcCh
     ///    not take into account the block time.
     /// - return error if header.timestamp < dst_timestamp + client_state.max_clock_drift
     ///
-    /// Ref: https://github.com/informalsystems/hermes/issues/1445.
+    /// Ref: https://github.com/soohoio/hermes/issues/1445.
     #[instrument(
         name = "foreign_client.wait_for_header_validation_delay",
         level = "error",
@@ -1387,7 +1387,7 @@ impl<DstChain: ChainHandle, SrcChain: ChainHandle> ForeignClient<DstChain, SrcCh
         // ourselves.
         //
         // For more context, see:
-        // - https://github.com/informalsystems/hermes/pull/2950#issuecomment-1373733744
+        // - https://github.com/soohoio/hermes/pull/2950#issuecomment-1373733744
         // - https://github.com/cosmos/ibc-go/issues/1399
         heights.sort_by_key(|&h| core::cmp::Reverse(h));
 

@@ -9,7 +9,7 @@ FROM rust:1-buster AS build-env
 ARG TAG
 WORKDIR /root
 
-RUN git clone -b ${TAG} --depth 1 https://github.com/informalsystems/hermes \
+RUN git clone -b ${TAG} --depth 1 https://github.com/soohoio/hermes \
  && cd hermes \
  && cargo build --release
 

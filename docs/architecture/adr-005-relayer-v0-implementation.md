@@ -218,7 +218,7 @@ Accepted
 - __Gaia__: the correct Gaia instance for working with `v0.1` can be obtained 
   from https://github.com/cosmos/relayer, with `git checkout v4.0.0` by 
   executing `make build-gaia`. This
-  [comment](https://github.com/informalsystems/hermes/pull/449#issuecomment-750248113)
+  [comment](https://github.com/soohoio/hermes/pull/449#issuecomment-750248113)
   provides additional insights into development-time relayer `v0.1` environment.
 
 - __Mock__: Has been removed after splittin the ibc-rs repository
@@ -226,9 +226,9 @@ Accepted
 
 
 [ids]: https://github.com/cosmos/cosmos-sdk/pull/7993
-[link]: https://github.com/informalsystems/hermes/blob/master/docs/architecture/adr-004-relayer-domain-decomposition.md#link
-[chain-req]: https://github.com/informalsystems/hermes/blob/379dd9812f6e7a42b9428f64eb52fe292d417476/relayer/src/chain/handle.rs#L51
-[ibc-relayer]: https://github.com/informalsystems/hermes/tree/master/crates/relayer
-[ibc-relayer-cli]: https://github.com/informalsystems/hermes/tree/master/crates/relayer-cli
+[link]: https://github.com/soohoio/hermes/blob/master/docs/architecture/adr-004-relayer-domain-decomposition.md#link
+[chain-req]: https://github.com/soohoio/hermes/blob/379dd9812f6e7a42b9428f64eb52fe292d417476/relayer/src/chain/handle.rs#L51
+[ibc-relayer]: https://github.com/soohoio/hermes/tree/master/crates/relayer
+[ibc-relayer-cli]: https://github.com/soohoio/hermes/tree/master/crates/relayer-cli
 [hermes]: https://hermes.informal.systems
-[features]: https://github.com/informalsystems/hermes/blob/v0.1.0/guide/src/feature_matrix.md
+[features]: https://github.com/soohoio/hermes/blob/v0.1.0/guide/src/feature_matrix.md

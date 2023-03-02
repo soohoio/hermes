@@ -18,14 +18,14 @@ See the full release notes below for more details.
 ### FEATURES
 
 - Support for Cross-chain Queries ([ICS 031][ics-031])
-  ([#2915](https://github.com/informalsystems/hermes/pull/2915))
+  ([#2915](https://github.com/soohoio/hermes/pull/2915))
 
 ### Guide
 
 ### IMPROVEMENTS
 
 - Document `upgrade clients` command, [see the guide](https://hermes.informal.systems/documentation/commands/upgrade/index.html)
-  ([#3066](https://github.com/informalsystems/hermes/issues/3066))
+  ([#3066](https://github.com/soohoio/hermes/issues/3066))
 
 
 ### Hermes - `ibc-relayer-cli` (v1.3.0)
@@ -33,23 +33,23 @@ See the full release notes below for more details.
 ### BUG FIXES
 
 - Fix error message on client update with expired trusted state
-  ([#3054](https://github.com/informalsystems/hermes/issues/3054))
+  ([#3054](https://github.com/soohoio/hermes/issues/3054))
 
 ### Relayer Library - `ibc-relayer` (v0.22.0)
 
 #### BREAKING CHANGES
 
 - Remove `query_consensus_states` from the `ChainEndpoint` trait
-  ([#2001](https://github.com/informalsystems/hermes/issues/2001))
+  ([#2001](https://github.com/soohoio/hermes/issues/2001))
 - The `query consensus state` command now only list heights and its `--heights-only` option was removed
-  ([#2001](https://github.com/informalsystems/hermes/issues/2001))
+  ([#2001](https://github.com/soohoio/hermes/issues/2001))
 - Bump the default trust threshold for new clients from 1/3 to 2/3
-  ([#2876](https://github.com/informalsystems/hermes/issues/2876))
+  ([#2876](https://github.com/soohoio/hermes/issues/2876))
 
 #### FEATURES
 
 - Enable optimistic channel handshake
-  ([#2910](https://github.com/informalsystems/hermes/issues/2910))
+  ([#2910](https://github.com/soohoio/hermes/issues/2910))
 
 #### IMPROVEMENTS
 
@@ -61,13 +61,13 @@ See the full release notes below for more details.
 #### BUG FIXES
 
 - Fix proof in timeout on close messages for ordered channels
-  ([#3024](https://github.com/informalsystems/hermes/issues/3024))
+  ([#3024](https://github.com/soohoio/hermes/issues/3024))
 - Fix upgraded client state latest height in upgrade proposal
-  ([#3057](https://github.com/informalsystems/hermes/issues/3057))
+  ([#3057](https://github.com/soohoio/hermes/issues/3057))
 - Fix bug where one could sometimes not subscribe to events.
   This mostly affected the `listen` command but also external
   consumers of events via the `EventMonitor` interface
-  ([#3070](https://github.com/informalsystems/hermes/issues/3070))
+  ([#3070](https://github.com/soohoio/hermes/issues/3070))
 
 ### Integration Test Framework - [`ibc-test-framework`](tools/test-framework) (v0.22.0)
 
@@ -75,12 +75,12 @@ See the full release notes below for more details.
 
 - Updated packet forwarding tests to use memo field instead of
   overloading receiver following packet-forward-middleware v3.0.0 update
-  ([#3025](https://github.com/informalsystems/hermes/issues/3025))
+  ([#3025](https://github.com/soohoio/hermes/issues/3025))
 
 ### FEATURES
 
 - Add integration tests for ICS31 Cross Chain Queries
-  ([#2967](https://github.com/informalsystems/hermes/issues/2967))
+  ([#2967](https://github.com/soohoio/hermes/issues/2967))
 
 
 ## v1.2.0
@@ -99,14 +99,14 @@ Additionally, IBC clients with a trust level between `1/3` and `2/3` inclusive a
 #### BREAKING CHANGES
 
 - Update minimum supported Rust version to 1.65.0
-  ([#2817](https://github.com/informalsystems/hermes/pull/2817))
+  ([#2817](https://github.com/soohoio/hermes/pull/2817))
 - Update to `tendermint-rs` 0.28 and ibc-proto 0.24
   ([#2944](https://github.com/informalsystems/ibc-rs/issues/2944))
 
 #### IMPROVEMENTS
 
 - Test against Gaia v8 in CI
-  ([#2820](https://github.com/informalsystems/hermes/issues/2820))
+  ([#2820](https://github.com/soohoio/hermes/issues/2820))
 - Use rolling Ubuntu as base image in Hermes Docker image to
   reduce fix several vulnerabilities found in previous base image
   ([#2810](https://github.com/informalsystems/ibc-rs/issues/2810))
@@ -140,9 +140,9 @@ Additionally, IBC clients with a trust level between `1/3` and `2/3` inclusive a
 - The health check process now compares the configured `gas_price` config
   setting against the full node's `min_gas_price` setting, ensuring that
   the former is at least equal to the latter
-  ([#2776](https://github.com/informalsystems/hermes/issues/2776))
+  ([#2776](https://github.com/soohoio/hermes/issues/2776))
 - IBC clients with trust thresholds in the range [1/3, 2/3] (inclusive) are now allowed
-  ([#2798](https://github.com/informalsystems/hermes/issues/2798))
+  ([#2798](https://github.com/soohoio/hermes/issues/2798))
 - Move default implementations of `init_event_monitor`, `id`, `get_key`,
   and `add_key` from CosmosSdkChain to ChainEndpoint, and change
   `ChainEndpoint::config()` to return a `&ChainConfig` instead of
@@ -166,7 +166,7 @@ Additionally, IBC clients with a trust level between `1/3` and `2/3` inclusive a
 - Added integration tests and guide entry for packet forwarding.
   ([#1983](https://github.com/informalsystems/ibc-rs/issues/1983))
 - Improved error logs when the height given to upgrade a client is too low.
-  ([#2781](https://github.com/informalsystems/hermes/issues/2781))
+  ([#2781](https://github.com/soohoio/hermes/issues/2781))
 - Added integration tests for client upgrade.
   ([#2312](https://github.com/informalsystems/ibc-rs/issues/2312))
 
@@ -199,10 +199,10 @@ Please reach out to us if you encounter any issue following from
 this reorganization of the repository.
 
 [ibc]: https://github.com/cosmos/ibc-rs
-[ibc-proto]: https://github.com/cosmos/ibc-proto-rs
+[ibc-proto]: https://github.com/soohoio/ibc-proto-rs
 [cosmos]: https://github.com/cosmos
 [split-tweet]: https://twitter.com/informalinc/status/1578120684508692481
-[split-issue]: https://github.com/informalsystems/hermes/issues/2639
+[split-issue]: https://github.com/soohoio/hermes/issues/2639
 
 ### General
 
@@ -216,16 +216,16 @@ For more information, see [this section](https://hermes.informal.systems/tutoria
 #### BREAKING CHANGES
 
 - Removed `gm` folder and its contents
-  ([#2754](https://github.com/informalsystems/hermes/issues/2754))
+  ([#2754](https://github.com/soohoio/hermes/issues/2754))
 - Remove the `ibc-proto` and `ibc-proto-compiler` crates from the repository
-  ([#2667](https://github.com/informalsystems/hermes/pull/2667))
+  ([#2667](https://github.com/soohoio/hermes/pull/2667))
 
 #### BUG FIXES
 
 - Fix incorrect Github workflow trigger paths
-  ([#2667](https://github.com/informalsystems/hermes/pull/2667))
+  ([#2667](https://github.com/soohoio/hermes/pull/2667))
 - Fix comment in `config.toml` to correctly state that the default value of `clear_on_start` is `true`
-  ([#2750](https://github.com/informalsystems/hermes/issues/2750))
+  ([#2750](https://github.com/soohoio/hermes/issues/2750))
 
 
 ### Hermes - `ibc-relayer-cli` (v1.1.0)
@@ -233,24 +233,24 @@ For more information, see [this section](https://hermes.informal.systems/tutoria
 #### FEATURES
 
 - Add `hermes auto config` CLI command to automatically generate a config file with data from the chain registry
-  ([#2187](https://github.com/informalsystems/hermes/issues/2187))
+  ([#2187](https://github.com/soohoio/hermes/issues/2187))
 - Added new optional flag `--packet-data-query-height` to CLI `hermes tx packet-recv`
   in order to specify the height at which the packet data is queried
-  ([#2453](https://github.com/informalsystems/hermes/issues/2453))
+  ([#2453](https://github.com/soohoio/hermes/issues/2453))
 - New command `fee transfer` which transfers tokens with fees
-  ([#2714](https://github.com/informalsystems/hermes/issues/2714))
+  ([#2714](https://github.com/soohoio/hermes/issues/2714))
 
 #### IMPROVEMENTS
 
 - Clean up the logs emitted by the relayer and add more
   structured information to the messages recorded in the logs
-  ([#1538](https://github.com/informalsystems/hermes/issues/1538))
+  ([#1538](https://github.com/soohoio/hermes/issues/1538))
 - Log the packets cleared by the `clear packets` command
-  ([#2653](https://github.com/informalsystems/hermes/pull/2653))
+  ([#2653](https://github.com/soohoio/hermes/pull/2653))
 - Add a new optional flag, `--denom` to the `hermes keys balance` command in order
   to specify for which denomination the balance is queried.
   Specify the `--all` flag to get the balance for all denominations
-  ([#2726](https://github.com/informalsystems/hermes/issues/2726))
+  ([#2726](https://github.com/soohoio/hermes/issues/2726))
 
 
 ### Relayer Library - `ibc-relayer` (v0.20.0)
@@ -263,35 +263,35 @@ For more information, see [this section](https://hermes.informal.systems/tutoria
 #### BUG FIXES
 
 - The channel and connection workers do not act needlessly on `NewBlock` events
-  anymore ([#2484](https://github.com/informalsystems/hermes/issues/2484))
+  anymore ([#2484](https://github.com/soohoio/hermes/issues/2484))
 - Fix several bugs which were preventing Hermes to clear packets on ordered channels
   in some specific conditions, as exhibited on the Interchain Security testnet
-  ([#2670](https://github.com/informalsystems/hermes/issues/2670))
+  ([#2670](https://github.com/soohoio/hermes/issues/2670))
 - Fix how headers are decoded from events
-  ([#2739](https://github.com/informalsystems/hermes/issues/2739))
+  ([#2739](https://github.com/soohoio/hermes/issues/2739))
 
 #### FEATURES
 
 - Support custom extension options to be able to specify `max_priority_price` for Ethermint dynamic tx fee
-  ([#2566](https://github.com/informalsystems/hermes/issues/2566))
+  ([#2566](https://github.com/soohoio/hermes/issues/2566))
 
 #### IMPROVEMENTS
 
 - Bump compatibility with IBC-Go v5 and Cosmos SDK v0.46
-  ([#2532](https://github.com/informalsystems/hermes/issues/2532))
+  ([#2532](https://github.com/soohoio/hermes/issues/2532))
 - Account for full transaction encoding when batching messages
-  ([#2575](https://github.com/informalsystems/hermes/pull/2575))
+  ([#2575](https://github.com/soohoio/hermes/pull/2575))
 - Add a health check to warn user if `gas_multiplier` is smaller than 1.1,
   and improve client refresh frequency to depend on the `trusting_period`
-  ([#2487](https://github.com/informalsystems/hermes/issues/2487))
+  ([#2487](https://github.com/soohoio/hermes/issues/2487))
 - Set `max_tx_size` default value to 180KB instead of 2MB
-  ([#2595](https://github.com/informalsystems/hermes/issues/2595))
+  ([#2595](https://github.com/soohoio/hermes/issues/2595))
 
 
 ### Chain Registry - `ibc-chain-registry` (v0.20.0)
 
 - New crate `ibc-chain-registry` to fetch data from the [chain-registry][cosmos-chain-registry] and query RPC/gRPC endpoints
-  ([#2187](https://github.com/informalsystems/hermes/issues/2187))
+  ([#2187](https://github.com/soohoio/hermes/issues/2187))
 
 [cosmos-chain-registry]: https://github.com/cosmos/chain-registry
 
@@ -300,14 +300,14 @@ For more information, see [this section](https://hermes.informal.systems/tutoria
 #### FEATURES
 
 - Added Evmos compatible integration tests
-  ([#2442](https://github.com/informalsystems/hermes/issues/2442))
+  ([#2442](https://github.com/soohoio/hermes/issues/2442))
 
 ### Guide
 
 #### IMPROVEMENTS
 
 - Integration with `mdbook` templates
-  ([#2605](https://github.com/informalsystems/hermes/issues/2605))
+  ([#2605](https://github.com/soohoio/hermes/issues/2605))
 - New script `auto_gen_templates.sh` to automatically generate templates files and warns users when one of them is updated. It is the responsibility of the users to update the guide when a template file is updated
 - New CI job to check that every template is up-to-date
 
@@ -350,7 +350,7 @@ For reaching this milestone, we thank the valuable contributions of over 50 indi
   can be used to observe both the current state of the relayer and the networks it is connected to
 - Added many new metrics to the telemetry. The full list can be found in new the guide section linked above
 
-[gas-mul]: https://github.com/informalsystems/hermes/blob/v1.0.0/UPGRADING.md#the-gas_adjustment-setting-has-been-deprecated-in-favor-of-gas_multiplier
+[gas-mul]: https://github.com/soohoio/hermes/blob/v1.0.0/UPGRADING.md#the-gas_adjustment-setting-has-been-deprecated-in-favor-of-gas_multiplier
 
 ### Change to the versioning scheme
 
@@ -385,7 +385,7 @@ v1.0.0-rc.2, v1.0.0-rc.1 and v1.0.0-rc.0.
 
 - Release version 1.0.0 of Hermes (`ibc-relayer-cli`)
 
-### IBC Proto - [`ibc-proto`](https://github.com/cosmos/ibc-proto-rs) (v0.20.0)
+### IBC Proto - [`ibc-proto`](https://github.com/soohoio/ibc-proto-rs) (v0.20.0)
 
 - Release version 0.20.1 of `ibc-proto`
 
@@ -396,12 +396,12 @@ v1.0.0-rc.2, v1.0.0-rc.1 and v1.0.0-rc.0.
 #### BREAKING CHANGES
 
 - Remove `height` attribute from `IbcEvent` and its variants
-  ([#2542](https://github.com/informalsystems/hermes/pull/2542))
+  ([#2542](https://github.com/soohoio/hermes/pull/2542))
 
 #### BUG FIXES
 
 - Fix `MsgTimeoutOnClose` to verify the channel proof
-  ([#2534](https://github.com/informalsystems/hermes/issues/2534))
+  ([#2534](https://github.com/soohoio/hermes/issues/2534))
 
 
 ### Relayer Library - [`ibc-relayer`](crates/relayer) (v0.19.0)
@@ -411,7 +411,7 @@ v1.0.0-rc.2, v1.0.0-rc.1 and v1.0.0-rc.0.
 #### FEATURES
 
 - Introduces discovery phase to initialize Prometheus metrics
-  ([#2479](https://github.com/informalsystems/hermes/issues/2479))
+  ([#2479](https://github.com/soohoio/hermes/issues/2479))
 
 #### IMPROVEMENTS
 
@@ -419,7 +419,7 @@ v1.0.0-rc.2, v1.0.0-rc.1 and v1.0.0-rc.0.
   functionality directly. Instead of exposing a getter for the
   `LightClient` trait, the `ChainEndpoint` trait now defines the
   two methods `verify_header` and `check_misbehaviour` directly.
-  ([#2548](https://github.com/informalsystems/hermes/issues/2548))
+  ([#2548](https://github.com/soohoio/hermes/issues/2548))
 
 
 ### Telemetry & Metrics - [`ibc-telemetry`](crates/telemetry) (v0.19.0)
@@ -428,7 +428,7 @@ v1.0.0-rc.2, v1.0.0-rc.1 and v1.0.0-rc.0.
 
 #### BREAKING CHANGES
 
-- Multiple fixes related to telemetry, detailed below ([#2479](https://github.com/informalsystems/hermes/issues/2479))
+- Multiple fixes related to telemetry, detailed below ([#2479](https://github.com/soohoio/hermes/issues/2479))
   - Renamed the following metrics:
     * `ibc_client_updates` to `client_updates_submitted`
     * `ibc_client_misbehaviours ` to `client_misbehaviours_submitted`
@@ -459,7 +459,7 @@ v1.0.0-rc.2, v1.0.0-rc.1 and v1.0.0-rc.0.
 
 - Document all metrics and [add a section][telemetry-guide] describing how Hermes metrics can be used to observe
   both the current state of the Hermes relayer and the networks it is connected to
- ([#2479](https://github.com/informalsystems/hermes/issues/2479))
+ ([#2479](https://github.com/soohoio/hermes/issues/2479))
 
 [telemetry-guide]: https://hermes.informal.systems/documentation/telemetry/operators.html
 
@@ -485,7 +485,7 @@ This is the third release candidate for Hermes v1.0.0 🎉
 
 - Release version 1.0.0-rc.2 of Hermes (`ibc-relayer-cli`)
 
-### IBC Proto - [`ibc-proto`](https://github.com/cosmos/ibc-proto-rs) (v0.20.0)
+### IBC Proto - [`ibc-proto`](https://github.com/soohoio/ibc-proto-rs) (v0.20.0)
 
 - Release version 0.20.0 of `ibc-proto`
 
@@ -502,14 +502,14 @@ This is the third release candidate for Hermes v1.0.0 🎉
 - For the `ConnOpenTry` and `ConnOpenAck` steps, wait for the destination
   app height to be higher than the consensus height, otherwise we fail to
   complete the handshake when the block times of the two chains involved differ
-  significantly ([#2433](https://github.com/informalsystems/hermes/issues/2433))
+  significantly ([#2433](https://github.com/soohoio/hermes/issues/2433))
 - Fix code that could result in message batch size growing above the transaction size limit
-  ([#2477](https://github.com/informalsystems/hermes/issues/2477)).
+  ([#2477](https://github.com/soohoio/hermes/issues/2477)).
 
 #### FEATURES
 
 - Enable connecting to full nodes over IPv6
-  ([#2380](https://github.com/informalsystems/hermes/issues/2380))
+  ([#2380](https://github.com/soohoio/hermes/issues/2380))
 
 ### Telemetry & Metrics - [`ibc-telemetry`](crates/telemetry) (v0.18.0)
 
@@ -524,14 +524,14 @@ This is the third release candidate for Hermes v1.0.0 🎉
     as a metric reporting how many packets are pending on a channel
   - Ensures the `backlog_oldest_sequence` and `backlog_oldest_timestamp` are correctly
     updated when a timeout occurs or when another relayer clears the channel
-    ([#2451](https://github.com/informalsystems/hermes/issues/2451))
+    ([#2451](https://github.com/soohoio/hermes/issues/2451))
   - Ensures `backlog_timestamp` is never updated by a packet with a higher `sequence` than the oldest pending packet
-    ([#2469](https://github.com/informalsystems/hermes/issues/2469))
+    ([#2469](https://github.com/soohoio/hermes/issues/2469))
 
 #### BUG FIXES
 
 - Fixed a bug with updating of Prometheus metrics in the presence of concurrent relayers
-  ([#2467](https://github.com/informalsystems/hermes/issues/2467))
+  ([#2467](https://github.com/soohoio/hermes/issues/2467))
 
 ### REST API - [`ibc-relayer-rest`](crates/relayer-rest) (v0.18.0)
 
@@ -542,9 +542,9 @@ This is the third release candidate for Hermes v1.0.0 🎉
 #### IMPROVEMENTS
 
 - Document how to use HTTP basic authentication in the guide
-  ([#2459](https://github.com/informalsystems/hermes/issues/2459))
+  ([#2459](https://github.com/soohoio/hermes/issues/2459))
 - Remove tutorial featuring raw commands from the guide
-  ([#2466](https://github.com/informalsystems/hermes/issues/2466))
+  ([#2466](https://github.com/soohoio/hermes/issues/2466))
 
 
 ## v1.0.0-rc.1
@@ -563,63 +563,63 @@ This is the second release candidate for Hermes v1.0.0 🎉
 - Bump `ibc-proto` crate to 0.19.1
 - Bump `ibc`, `ibc-relayer`, `ibc-telemetry`, `ibc-relayer-rest` crates to v0.17.0
 - Bump tendermint-rs dependencies to 0.23.8
-  ([#2455](https://github.com/informalsystems/hermes/issues/2455))
+  ([#2455](https://github.com/soohoio/hermes/issues/2455))
 
 ### Hermes - [`ibc-relayer-cli`](crates/relayer-cli) (v1.0.0-rc.1)
 
 #### BREAKING CHANGES
 
 - Drop the `raw` prefix from all the `tx raw` commands
-  ([#2315](https://github.com/informalsystems/hermes/issues/2315)
+  ([#2315](https://github.com/soohoio/hermes/issues/2315)
 - Remove the four duplicate commands:
   * `tx raw update-client`, which is the same as `update client`
   * `tx raw upgrade-client`, which is the same as `upgrade client`
   * `tx raw upgrade-clients`, which is the same as `upgrade clients`
   * `tx raw create-client`, which is the same as `create client`
-  * ([#2315](https://github.com/informalsystems/hermes/issues/2376))
+  * ([#2315](https://github.com/soohoio/hermes/issues/2376))
 - Rename `--a-` and `--b-` prefixes in `hermes tx` subcommands to `--src-` and `--dst-`
-  ([#2410](https://github.com/informalsystems/hermes/issues/2410))
+  ([#2410](https://github.com/soohoio/hermes/issues/2410))
 - Rename flags of `tx upgrade-chain` command from `--src`/`--dst` to `--reference`/`--host`
-  ([#2376](https://github.com/informalsystems/hermes/issues/2376))
+  ([#2376](https://github.com/soohoio/hermes/issues/2376))
 - The default value of the configuration `tx_confirmation`
   in Hermes `config.toml` has been changed from `true` to `false`.
-  ([#2408](https://github.com/informalsystems/hermes/issues/2408))
+  ([#2408](https://github.com/soohoio/hermes/issues/2408))
 
 #### BUG FIXES
 
 - Fixed filtering counterparty chain in Hermes command `query channels`
-  ([#1132](https://github.com/informalsystems/hermes/issues/1132))
+  ([#1132](https://github.com/soohoio/hermes/issues/1132))
 - Fixed command `tx raw ft-transfer` to correctly use the address given by the `--receiver` flag
-  ([#2405](https://github.com/informalsystems/hermes/issues/2405))
+  ([#2405](https://github.com/soohoio/hermes/issues/2405))
 
 #### FEATURES
 
 - Add an optional `--show-counterparty` flag to `hermes query channels` which outputs every channel
   along with its corresponding port, and the counterparty chain's id, in a pretty way
-  ([#2429](https://github.com/informalsystems/hermes/issues/2429))
+  ([#2429](https://github.com/soohoio/hermes/issues/2429))
 - New optional flags `--counterparty-chain` and `--verbose` for the command `query connections`
-  ([#2310](https://github.com/informalsystems/hermes/issues/2310))
+  ([#2310](https://github.com/soohoio/hermes/issues/2310))
 - Added new optional flag `--host-chain` to filter which clients are upgraded when running `upgrade clients` command
-  ([#2311](https://github.com/informalsystems/hermes/issues/2311))
+  ([#2311](https://github.com/soohoio/hermes/issues/2311))
 
 #### IMPROVEMENTS
 
 - Hermes command `keys add` now checks for existing key and overwrites only if the flag `--overwrite` is passed
-  ([#2375](https://github.com/informalsystems/hermes/issues/2375))
+  ([#2375](https://github.com/soohoio/hermes/issues/2375))
 - Rename `--a-` and `--b-` prefixes in `hermes tx` subcommands to `--src-` and `--dst-`
-  ([#2410](https://github.com/informalsystems/hermes/issues/2410))
+  ([#2410](https://github.com/soohoio/hermes/issues/2410))
 - Increase default value for `gas_multiplier` setting to 1.1
-  ([#2435](https://github.com/informalsystems/hermes/issues/2435))
+  ([#2435](https://github.com/soohoio/hermes/issues/2435))
 - Output status is now colored in green for success and red for error
-  ([#2431](https://github.com/informalsystems/hermes/issues/2431))
+  ([#2431](https://github.com/soohoio/hermes/issues/2431))
 
 
-### IBC Proto - [`ibc-proto`](https://github.com/cosmos/ibc-proto-rs) (v0.19.1)
+### IBC Proto - [`ibc-proto`](https://github.com/soohoio/ibc-proto-rs) (v0.19.1)
 
 #### IMPROVEMENTS
 
 - Update Protobuf definitions for IBC-Go to v4.0.0-rc0 and Cosmos SDK to v0.45.6
-  ([#1](https://github.com/cosmos/ibc-proto-rs/issues/1))
+  ([#1](https://github.com/soohoio/ibc-proto-rs/issues/1))
 
 
 ### IBC Modules - [`ibc`](https://github.com/cosmos/ibc-rs) (v0.17.0)
@@ -641,7 +641,7 @@ This is the second release candidate for Hermes v1.0.0 🎉
 #### IMPROVEMENTS
 
 - Propose ADR011 for light client extraction
-  ([#2356](https://github.com/informalsystems/hermes/pull/2356))
+  ([#2356](https://github.com/soohoio/hermes/pull/2356))
 
 
 ### Relayer Library - [`ibc-relayer`](crates/relayer) (v0.17.0)
@@ -650,10 +650,10 @@ This is the second release candidate for Hermes v1.0.0 🎉
 
 - Fix a regression where Hermes would not retry relaying packet on account
   mismatch error when the sequence number used was smaller than the expected one
-  ([#2411](https://github.com/informalsystems/hermes/issues/2411))
+  ([#2411](https://github.com/soohoio/hermes/issues/2411))
 - Fix a bug where the relayer would fail to relay any packets when the
   `/acbi_info` endpoint of a chain did not include `data` and `version` fields
-  ([#2444](https://github.com/informalsystems/hermes/issues/2444))
+  ([#2444](https://github.com/soohoio/hermes/issues/2444))
 
 
 ### Telemetry & Metrics - [`ibc-telemetry`](crates/telemetry) (v0.17.0)
@@ -663,10 +663,10 @@ This is the second release candidate for Hermes v1.0.0 🎉
 - Updated telemetry metric `wallet_balance` to f64 and removed downscaling
   displayed value. Please note that when converting the balance to f64 a loss in
   precision might be introduced in the displayed value
-  ([#2381](https://github.com/informalsystems/hermes/issues/2381))
+  ([#2381](https://github.com/soohoio/hermes/issues/2381))
 - Improved naming and description of some telemetry metrics and added
   histogram buckets for `tx_latency` metrics
-  ([#2408](https://github.com/informalsystems/hermes/issues/2408))
+  ([#2408](https://github.com/soohoio/hermes/issues/2408))
 
 ## v1.0.0-rc.0
 
@@ -697,54 +697,54 @@ eg. feature, bug fix, etc.
 
 - New ADR which describes the changes to the Hermes commands, specifically
   the move to flags instead of positional arguments.
-  ([#594](https://github.com/informalsystems/hermes/issues/594))
+  ([#594](https://github.com/soohoio/hermes/issues/594))
 - Merged commands `keys add` and `keys restore` into single command `keys add`.
   The flag to specify the key name for the CLI command `keys add` has been changed
   from `-n` to `-k`. Restoring a key now takes a file containing the mnemonic as
   input instead of directly taking the mnemonic.
-  ([#1075](https://github.com/informalsystems/hermes/issues/1075))
+  ([#1075](https://github.com/soohoio/hermes/issues/1075))
 - Deprecate `gas_adjustment` setting in favor of new `gas_multiplier` setting
-  ([#2174](https://github.com/informalsystems/hermes/issues/2174))
+  ([#2174](https://github.com/soohoio/hermes/issues/2174))
 - Updated all CLI commands to take flags instead of positional arguments.
-  ([#2239](https://github.com/informalsystems/hermes/issues/2239))
+  ([#2239](https://github.com/soohoio/hermes/issues/2239))
 - Rename `query packet unreceived-packets` to `query packet pending-sends`
   and `query packet unreceived-acks` to `query packet pending-acks`
-  ([#2379](https://github.com/informalsystems/hermes/issues/2379))
+  ([#2379](https://github.com/soohoio/hermes/issues/2379))
 
 #### BUG FIXES
 
 - CLI command `config validate` now correctly outputs an error if the configuration file
-  does not exist or is empty. ([#2143](https://github.com/informalsystems/hermes/issues/2143))
+  does not exist or is empty. ([#2143](https://github.com/soohoio/hermes/issues/2143))
 - Fix the flow for crate connection to ensure success
   despite concurrent relayers racing to finish the handshake.
-  ([#2168](https://github.com/informalsystems/hermes/issues/2168))
+  ([#2168](https://github.com/soohoio/hermes/issues/2168))
 
 #### FEATURES
 
 - Added CLI command `keys balance` which outputs the balance of an account associated with a
-  key ([#912](https://github.com/informalsystems/hermes/issues/912))
+  key ([#912](https://github.com/soohoio/hermes/issues/912))
 - Added CLI command `query channel client` which outputs the channel's client state
-  ([#999](https://github.com/informalsystems/hermes/issues/999))
+  ([#999](https://github.com/soohoio/hermes/issues/999))
 - Added CLI command `query transfer denom-trace` which outputs the base denomination and path of a given
   trace hash ([#43](https://github.com/cosmos/ibc-rs/issues/43))
 - Add unit tests for all Hermes commands with at least one argument
-  ([#2358](https://github.com/informalsystems/hermes/issues/2358))
+  ([#2358](https://github.com/soohoio/hermes/issues/2358))
 
 #### IMPROVEMENTS
 
-- Add support for selecting a specific wallet in the `clear packets` CLI flow ([#2111](https://github.com/informalsystems/hermes/issues/2111))
+- Add support for selecting a specific wallet in the `clear packets` CLI flow ([#2111](https://github.com/soohoio/hermes/issues/2111))
 - Added a required flag `--upgrade-height` that halts the reference chain at the
   specified height when performing a client upgrade
-  ([#2300](https://github.com/informalsystems/hermes/issues/2300))
+  ([#2300](https://github.com/soohoio/hermes/issues/2300))
 - Added `--yes` flag to the `create channel` flow to enable skipping the
-  `--new-client-connection` step ([#2317](https://github.com/informalsystems/hermes/issues/2317))
+  `--new-client-connection` step ([#2317](https://github.com/soohoio/hermes/issues/2317))
 
-### IBC Proto - [`ibc-proto`](https://github.com/cosmos/ibc-proto-rs) (v0.19.0)
+### IBC Proto - [`ibc-proto`](https://github.com/soohoio/ibc-proto-rs) (v0.19.0)
 
 #### FEATURES
 
 - Generate gRPC server code under feature 'server'
-  ([#2277](https://github.com/informalsystems/hermes/issues/2277))
+  ([#2277](https://github.com/soohoio/hermes/issues/2277))
 
 
 ### IBC Modules - [`ibc`](https://github.com/cosmos/ibc-rs) (v0.16.0)
@@ -766,11 +766,11 @@ eg. feature, bug fix, etc.
 #### IMPROVEMENTS
 
 - Remove the concept of a zero Height
-  ([#1009](https://github.com/informalsystems/hermes/issues/1009))
+  ([#1009](https://github.com/soohoio/hermes/issues/1009))
 - Complete ICS20 implementation ([#59](https://github.com/cosmos/ibc-rs/issues/59))
 - Derive `serde::{Serialize, Deserialize}` for `U256`. ([#41](https://github.com/cosmos/ibc-rs/issues/41))
 - Remove unnecessary supertraits requirements from ICS20 traits.
-  ([#2280](https://github.com/informalsystems/hermes/pull/2280))
+  ([#2280](https://github.com/soohoio/hermes/pull/2280))
 
 
 ### Relayer Library - [`ibc-relayer`](crates/relayer) (v0.16.0)
@@ -778,33 +778,33 @@ eg. feature, bug fix, etc.
 #### BUG FIXES
 
 - Fix `execute_schedule` method dropping operational data due to improper
-  handling of errors. ([#2118](https://github.com/informalsystems/hermes/issues/1153))
-- Fix duplicate packets being generated on start. ([#2093](https://github.com/informalsystems/hermes/issues/2093))
+  handling of errors. ([#2118](https://github.com/soohoio/hermes/issues/1153))
+- Fix duplicate packets being generated on start. ([#2093](https://github.com/soohoio/hermes/issues/2093))
 - Use appropriate height when querying for client upgrade state
-  ([#2185](https://github.com/informalsystems/hermes/issues/2185))
+  ([#2185](https://github.com/soohoio/hermes/issues/2185))
 - Fix the channel handshake issues that occur when concurrent relayers are
-  present ([#2254](https://github.com/informalsystems/hermes/issues/2254))
+  present ([#2254](https://github.com/soohoio/hermes/issues/2254))
 - When Hermes submits `N` messages to a chain, it will now always gets back `N` responses, even in the presence of errors.
-  ([#2333](https://github.com/informalsystems/hermes/issues/2333))
+  ([#2333](https://github.com/soohoio/hermes/issues/2333))
 
 #### FEATURES
 
 - Add preliminary support for multiple chain types, which can be specified in
   the chain configuration. At the moment only the `CosmosSdk` chain type is
-  supported. ([#2240](https://github.com/informalsystems/hermes/issues/2240))
+  supported. ([#2240](https://github.com/soohoio/hermes/issues/2240))
 - Add support for fetching & parsing the Tendermint version of a network that
-  Hermes is connected to. ([#2301](https://github.com/informalsystems/hermes/issues/2301))
+  Hermes is connected to. ([#2301](https://github.com/soohoio/hermes/issues/2301))
 
 #### IMPROVEMENTS
 
 - Added handler for SDK error 13 in order to output an understandable error
-  message. ([#1400](https://github.com/informalsystems/hermes/issues/1400))
+  message. ([#1400](https://github.com/soohoio/hermes/issues/1400))
 - Do not retry indefinitely on command handling failure in the packet worker
-  ([#2155](https://github.com/informalsystems/hermes/issues/2155))
+  ([#2155](https://github.com/soohoio/hermes/issues/2155))
 - Consolidate `ChainEndpoint::proven_*` methods with their corresponding `query_*` form
-  ([#2223](https://github.com/informalsystems/hermes/issues/2223))
+  ([#2223](https://github.com/soohoio/hermes/issues/2223))
 - Reduce relaying delay when some account mismatch errors occur during Tx
-  simulation ([#2249](https://github.com/informalsystems/hermes/issues/2249))
+  simulation ([#2249](https://github.com/soohoio/hermes/issues/2249))
 
 ### Telemetry & Metrics - [`ibc-telemetry`](crates/telemetry) (v0.16.0)
 
@@ -812,7 +812,7 @@ eg. feature, bug fix, etc.
 
 - Added new metrics to track the number of relayed `SendPacket` and `WriteAcknowledgement`
   messages, the sequence number and the timestamp of the oldest pending `SendPacket`
-  ([#2175](https://github.com/informalsystems/hermes/issues/2175))
+  ([#2175](https://github.com/soohoio/hermes/issues/2175))
 
 
 ## v0.15.0
@@ -820,8 +820,8 @@ eg. feature, bug fix, etc.
 *May 23rd, 2022*
 
 This release brings a number of bug fixes, some performance improvements,
-notably when [clearing packets](https://github.com/informalsystems/hermes/issues/2087),
-as well as [new metrics](https://github.com/informalsystems/hermes/issues/2112)
+notably when [clearing packets](https://github.com/soohoio/hermes/issues/2087),
+as well as [new metrics](https://github.com/soohoio/hermes/issues/2112)
 for better observability of the relayer's operations.
 
 ### BUG FIXES
@@ -835,19 +835,19 @@ for better observability of the relayer's operations.
     ([#44](https://github.com/cosmos/ibc-rs/issues/44))
 - [Relayer Library](crates/relayer)
   - Fix a bug where connection and channel handshakes would fail with non-batching transactions
-    ([#1971](https://github.com/informalsystems/hermes/issues/1971))
+    ([#1971](https://github.com/soohoio/hermes/issues/1971))
   - Fixed client expiry computation to avoid using local time.
-    ([#2180](https://github.com/informalsystems/hermes/issues/2180))
+    ([#2180](https://github.com/soohoio/hermes/issues/2180))
 
 ### FEATURES
 
 - General
   - Replaced gaia v5 with v7 in E2E tests.
-    ([#1986](https://github.com/informalsystems/hermes/issues/1986))
+    ([#1986](https://github.com/soohoio/hermes/issues/1986))
 - [Relayer Library](crates/relayer)
   - Add six new metrics: `wallet_balance`, `ws_events`, `ws_reconnect`,
     `tx_latency_submitted`, `tx_latency_confirmed`, `msg_num`
-    ([#2112](https://github.com/informalsystems/hermes/issues/2112))
+    ([#2112](https://github.com/soohoio/hermes/issues/2112))
 
 ### IMPROVEMENTS
 
@@ -856,13 +856,13 @@ for better observability of the relayer's operations.
     ([#45](https://github.com/cosmos/ibc-rs/issues/45))
 - [Relayer Library](crates/relayer)
   - Ensure `max_msg_num` is between 1 and 100 with a default of 30
-    ([#1971](https://github.com/informalsystems/hermes/issues/1971))
+    ([#1971](https://github.com/soohoio/hermes/issues/1971))
   - Fixed misleading error message leaking from the misbehavior detection task.
-    ([#2031](https://github.com/informalsystems/hermes/issues/2031))
+    ([#2031](https://github.com/soohoio/hermes/issues/2031))
   - Added support for incremental processing of packet clearing commands.
-    ([#2087](https://github.com/informalsystems/hermes/issues/2087))
+    ([#2087](https://github.com/soohoio/hermes/issues/2087))
   - Implement ADR 9: add domain type for request messages that are passed to query
-    functions ([#2192](https://github.com/informalsystems/hermes/issues/2192))
+    functions ([#2192](https://github.com/soohoio/hermes/issues/2192))
 
 ## v0.14.1
 
@@ -875,7 +875,7 @@ some queries would fail if they reach a full node after a new block is committed
 
 - [Relayer Library](crates/relayer)
   - Fixed query for application status when application state lags behind blockchain state.
-    ([#1970](https://github.com/informalsystems/hermes/issues/1970))
+    ([#1970](https://github.com/soohoio/hermes/issues/1970))
 
 ## v0.14.0
 
@@ -902,9 +902,9 @@ Please [refer to the guide][create-channel] for more information.
 ### BREAKING CHANGES
 
 - `create channel` now requires a `--new-client-connection` flag to create a new client and connection for the channel
-  ([#1421](https://github.com/informalsystems/hermes/issues/1421))
+  ([#1421](https://github.com/soohoio/hermes/issues/1421))
 - Update MSRV to Rust 1.60
-  ([#2081](https://github.com/informalsystems/hermes/pull/2081))
+  ([#2081](https://github.com/soohoio/hermes/pull/2081))
 
 ### BUG FIXES
 
@@ -915,43 +915,43 @@ Please [refer to the guide][create-channel] for more information.
     ([#51](https://github.com/cosmos/ibc-rs/issues/51))
 - [Relayer Library](crates/relayer)
   - Fix the connection delay logic to use the timestamp of the host block when the client update header was installed.
-    ([#1772](https://github.com/informalsystems/hermes/issues/1772))
-  - Fixed Hermes retrying mechanism not regenerating operational data for messages ([#1792](https://github.com/informalsystems/hermes/pull/1951))
+    ([#1772](https://github.com/soohoio/hermes/issues/1772))
+  - Fixed Hermes retrying mechanism not regenerating operational data for messages ([#1792](https://github.com/soohoio/hermes/pull/1951))
   - Adjusted max_block_time default value to 30s
-    ([#1998](https://github.com/informalsystems/hermes/issues/1998))
+    ([#1998](https://github.com/soohoio/hermes/issues/1998))
   - Fix a bug in the wildcard filter where pattern would match in the middle of a
-    string ([#2075](https://github.com/informalsystems/hermes/issues/2075))
+    string ([#2075](https://github.com/soohoio/hermes/issues/2075))
   - Fixed target height used in misbehavior detection.
-    ([#2097](https://github.com/informalsystems/hermes/issues/2097))
+    ([#2097](https://github.com/soohoio/hermes/issues/2097))
 - [Relayer CLI](crates/relayer-cli)
   - Skip waiting for confirmation events on tx raw upgrade-chain
-    ([#1288](https://github.com/informalsystems/hermes/issues/1288))
+    ([#1288](https://github.com/soohoio/hermes/issues/1288))
   - Apply client options specified with the `create client` command.
-    ([#1921](https://github.com/informalsystems/hermes/issues/1921))
+    ([#1921](https://github.com/soohoio/hermes/issues/1921))
 
 ### FEATURES
 
 - [Relayer Library](crates/relayer)
   - Add a metric for query cache hits
-    ([#2036](https://github.com/informalsystems/hermes/issues/2036))
+    ([#2036](https://github.com/soohoio/hermes/issues/2036))
 
 ### IMPROVEMENTS
 
 - General
   - Log `missing chain in configuration` errors emitted during event processing at
-    debug level ([#1936](https://github.com/informalsystems/hermes/issues/1936))
+    debug level ([#1936](https://github.com/soohoio/hermes/issues/1936))
   - Update tendermint-rs dependencies to v0.23.6
-    ([#2045](https://github.com/informalsystems/hermes/issues/2045))
+    ([#2045](https://github.com/soohoio/hermes/issues/2045))
 - [IBC Modules](https://github.com/cosmos/ibc-rs)
   - Complete ICS26 implementation ([#60](https://github.com/cosmos/ibc-rs/issues/60))
   - Improve `ChannelId` validation. ([#50](https://github.com/cosmos/ibc-rs/issues/50))
 - [Relayer CLI](crates/relayer-cli)
   - Change `create channel` CLI command such that it is more difficult to create
-    clients / connections using it ([#1421](https://github.com/informalsystems/hermes/issues/1421))
+    clients / connections using it ([#1421](https://github.com/soohoio/hermes/issues/1421))
   - Added `query packet pending` command to list outstanding packet
     commitments that are either unreceived or pending acknowledgement
     at both ends of a channel.
-    ([#1862](https://github.com/informalsystems/hermes/issues/1862))
+    ([#1862](https://github.com/soohoio/hermes/issues/1862))
 
 ## v0.13.0
 *March 28th, 2022*
@@ -1017,30 +1017,30 @@ This information can also be found in the [Hermes guide][guide-ica].
 
 - [Relayer Library](crates/relayer)
   - Fixed relayer behavior on ordered channels
-    ([#1835](https://github.com/informalsystems/hermes/issues/1835))
+    ([#1835](https://github.com/soohoio/hermes/issues/1835))
   - Do not spawn packet worker on chan open ack/confirm events
-    ([#1991](https://github.com/informalsystems/hermes/issues/1991))
+    ([#1991](https://github.com/soohoio/hermes/issues/1991))
   - Fix a bug which would cause the relayer to slow down exponentially when either
     the average block time was low or when it was relaying on too many chains at
-    once ([#2008](https://github.com/informalsystems/hermes/issues/2008))
+    once ([#2008](https://github.com/soohoio/hermes/issues/2008))
 
 ### FEATURES
 
-- [IBC Proto](https://github.com/cosmos/ibc-proto-rs)
-  - Add CosmWasm support to the generated Protobuf code ([#4](https://github.com/cosmos/ibc-proto-rs/issues/4))
+- [IBC Proto](https://github.com/soohoio/ibc-proto-rs)
+  - Add CosmWasm support to the generated Protobuf code ([#4](https://github.com/soohoio/ibc-proto-rs/issues/4))
     * Add a new `client` feature to gate the tonic client code, implies the `std` feature.
     * Add a new `json-schema` feature to derive `schemars::JsonSchema` on some proto types, implies the `std` feature.
     * Add `#[serde(default)]` to fields that might be omitted by Golang `omitempty` directive.
     * Change serialization of byte arrays to Base64 for compatibility with Go.
   - Derive `Serialize` and `Deserialize` for `ibc-proto::ibc::core` and `ibc_proto::ibc::applications` structs,
     and switch to Google's Protobuf standard types instead of Prost's types.
-    ([#3](https://github.com/cosmos/ibc-proto-rs/issues/3))
+    ([#3](https://github.com/soohoio/ibc-proto-rs/issues/3))
 - [Relayer Library](crates/relayer)
   - Added caching layer for hermes start command
-    ([#1908](https://github.com/informalsystems/hermes/issues/1908))
+    ([#1908](https://github.com/soohoio/hermes/issues/1908))
   - Add support for wildcards in port and channel identifiers in the packet filter configuration,
     which enable operators to filter ICA channels based on the port prefix
-    ([#1927](https://github.com/informalsystems/hermes/issues/1927))
+    ([#1927](https://github.com/soohoio/hermes/issues/1927))
 
 ### IMPROVEMENTS
 
@@ -1048,11 +1048,11 @@ This information can also be found in the [Hermes guide][guide-ica].
   - Refactored channels events in ICS 04 module
     ([#86](https://github.com/cosmos/ibc-rs/issues/86))
 - [Integration Test Framework](crates/relayer-cli)
-  - Split out test framework as new crate `ibc-test-framework` from `ibc-integration-test`. ([#1961](https://github.com/informalsystems/hermes/pull/1961))
+  - Split out test framework as new crate `ibc-test-framework` from `ibc-integration-test`. ([#1961](https://github.com/soohoio/hermes/pull/1961))
 - [Relayer Library](crates/relayer)
-  - Add documentation for the caching layer implemented in ([#1908](https://github.com/informalsystems/hermes/issues/1908))
+  - Add documentation for the caching layer implemented in ([#1908](https://github.com/soohoio/hermes/issues/1908))
 - [Relayer CLI](crates/relayer-cli)
-  - Print packet data on one line ([#1559](https://github.com/informalsystems/hermes/issues/1559))
+  - Print packet data on one line ([#1559](https://github.com/soohoio/hermes/issues/1559))
 
 ## v0.12.0
 *February 24th, 2022*
@@ -1082,26 +1082,26 @@ has been added for clearing packets in both direction on a given channel.
     state ([#57](https://github.com/cosmos/ibc-rs/issues/57))
 - [Relayer Library](crates/relayer)
   - Handle non-standard ports in channel handshake
-    ([#1837](https://github.com/informalsystems/hermes/issues/1837))
+    ([#1837](https://github.com/soohoio/hermes/issues/1837))
   - Fix duplicate SendPacket events emitted by EndBlock
-    ([#1844](https://github.com/informalsystems/hermes/issues/1844))
+    ([#1844](https://github.com/soohoio/hermes/issues/1844))
   - Fix support for non-standard ports in channel handshake
-    ([#1861](https://github.com/informalsystems/hermes/issues/1861),
-    [#1837](https://github.com/informalsystems/hermes/issues/1837))
+    ([#1861](https://github.com/soohoio/hermes/issues/1861),
+    [#1837](https://github.com/soohoio/hermes/issues/1837))
   - Fixed bug where Hermes cleared packets at startup, despite
-    `clear_on_start = false` ([#1872](https://github.com/informalsystems/hermes/issues/1872))
+    `clear_on_start = false` ([#1872](https://github.com/soohoio/hermes/issues/1872))
 - [Relayer CLI](crates/relayer-cli)
   - Disable reloading of configuration upon receiving a SIGHUP signal
-    ([#1885](https://github.com/informalsystems/hermes/issues/1885))
+    ([#1885](https://github.com/soohoio/hermes/issues/1885))
 
 ### FEATURES
 
 - General
   - Upgrade protos and compatibility to IBC v3.0.0-rc.0 and Cosmos SDK v0.45.1
-    ([#5](https://github.com/cosmos/ibc-proto-rs/issues/5))
+    ([#5](https://github.com/soohoio/ibc-proto-rs/issues/5))
 - [Relayer CLI](crates/relayer-cli)
   - Allow overriding the tracing filter with `RUST_LOG` environment variable
-    ([#1895](https://github.com/informalsystems/hermes/issues/1895))
+    ([#1895](https://github.com/soohoio/hermes/issues/1895))
 
 ### IMPROVEMENTS
 
@@ -1112,13 +1112,13 @@ has been added for clearing packets in both direction on a given channel.
     ([#58](https://github.com/cosmos/ibc-rs/issues/58))
 - [Relayer Library](crates/relayer)
   - Add two more health checks: tx indexing enabled and historical entries > 0
-    ([#1388](https://github.com/informalsystems/hermes/issues/1388))
+    ([#1388](https://github.com/soohoio/hermes/issues/1388))
   - Changed `ConnectionEnd::versions` method to be non-allocating by having it return a `&[Version]` instead of `Vec<Version>`
     ([#55](https://github.com/cosmos/ibc-rs/issues/55))
 - [Relayer CLI](crates/relayer-cli)
   - Added `clear packets` command, combining the effects of
     `tx raw packet-recv` and `tx raw packet-ack`
-    ([#1834](https://github.com/informalsystems/hermes/pull/1834))
+    ([#1834](https://github.com/soohoio/hermes/pull/1834))
 
 ## v0.11.1
 *February 4th, 2022*
@@ -1129,15 +1129,15 @@ This release mainly adds support for channel events originating from Tendermint 
 
 - [Relayer CLI](crates/relayer-cli)
   - Do not require a config file to be present for the `completions` command.
-    ([#1822](https://github.com/informalsystems/hermes/pull/1822))
+    ([#1822](https://github.com/soohoio/hermes/pull/1822))
 
 ### IMPROVEMENTS
 
 - [Relayer Library](crates/relayer)
   - Increased tx confirmation timeout to 300s to prevent aggressive tx
-    resubmission ([#1663](https://github.com/informalsystems/hermes/issues/1663))
+    resubmission ([#1663](https://github.com/soohoio/hermes/issues/1663))
   - Handle channel events originating from Tendermint ABCI's BeginBlock and EndBlock methods
-    ([#1793](https://github.com/informalsystems/hermes/issues/1793))
+    ([#1793](https://github.com/soohoio/hermes/issues/1793))
 
 
 ## v0.11.0
@@ -1183,13 +1183,13 @@ Before running Hermes v0.11.0, make sure you remove the `mode.packets.filter` op
 ### BREAKING CHANGES
 
 - General
-  - Update MSRV to Rust 1.58 ([#1765](https://github.com/informalsystems/hermes/issues/1765))
-  - Update tendermint-rs dependencies to 0.23.5 ([#1767](https://github.com/informalsystems/hermes/issues/1767))
+  - Update MSRV to Rust 1.58 ([#1765](https://github.com/soohoio/hermes/issues/1765))
+  - Update tendermint-rs dependencies to 0.23.5 ([#1767](https://github.com/soohoio/hermes/issues/1767))
 - [Relayer Library](crates/relayer)
   - Added a `denom` member to `upgrade_chain::UpgradePlanOptions`
-    ([#1662](https://github.com/informalsystems/hermes/issues/1662))
+    ([#1662](https://github.com/soohoio/hermes/issues/1662))
 - [IBC Modules](https://github.com/cosmos/ibc-rs)
-  - Hide `ibc::Timestamp::now()` behind `clock` feature flag ([#1612](https://github.com/informalsystems/hermes/issues/1612))
+  - Hide `ibc::Timestamp::now()` behind `clock` feature flag ([#1612](https://github.com/soohoio/hermes/issues/1612))
 
 ### BUG FIXES
 
@@ -1197,40 +1197,40 @@ Before running Hermes v0.11.0, make sure you remove the `mode.packets.filter` op
   - Verify the client consensus proof against the client's consensus state root and not the host's state root
     [#61](https://github.com/cosmos/ibc-rs/issues/61)
   - Initialize consensus metadata on client creation
-    ([#1763](https://github.com/informalsystems/hermes/pull/1763))
+    ([#1763](https://github.com/soohoio/hermes/pull/1763))
 
 ### IMPROVEMENTS
 
 - General
-  - Improve startup time of the relayer ([#1705](https://github.com/informalsystems/hermes/pull/1705))
+  - Improve startup time of the relayer ([#1705](https://github.com/soohoio/hermes/pull/1705))
       * When scanning a chain with filtering enabled and an allow list, skip scanning all the clients and query the allowed channels directly. This results in much fewer queries and a faster start.
       * Add a `--full-scan` option to `hermes start` to opt out of the fast start mechanism and do a full scan.
   - Update `tendermint-rs` to v0.23.4 and harmonize the dependencies to use a single TLS stack.
     A system installation of OpenSSL is no longer required to build Hermes.
-    ([#1641](https://github.com/informalsystems/hermes/issues/1641))
+    ([#1641](https://github.com/soohoio/hermes/issues/1641))
   - Remove 1 second sleep in `generate_tm_block` during testing with mock context.
-    ([#1687](https://github.com/informalsystems/hermes/issues/1687))
+    ([#1687](https://github.com/soohoio/hermes/issues/1687))
 - [IBC Modules](https://github.com/cosmos/ibc-rs)
   - Extract all `ics24_host::Path` variants into their separate types
-    ([#1760](https://github.com/informalsystems/hermes/pull/1760))
+    ([#1760](https://github.com/soohoio/hermes/pull/1760))
   - Disallow empty `CommitmentPrefix` and `CommitmentProofBytes`
-    ([#1761](https://github.com/informalsystems/hermes/pull/1761))
+    ([#1761](https://github.com/soohoio/hermes/pull/1761))
 - [Relayer Library](crates/relayer)
   - Allow `ChainEndpoint` implementations to fetch any types of clients
-    and consensus states ([#1481](https://github.com/informalsystems/hermes/issues/1481))
+    and consensus states ([#1481](https://github.com/soohoio/hermes/issues/1481))
   - More structural logging in relayer, using tracing spans and key-value pairs.
-    ([#1491](https://github.com/informalsystems/hermes/pull/1491))
+    ([#1491](https://github.com/soohoio/hermes/pull/1491))
   - Improved documention w.r.t. keys for Ethermint-based chains
-    ([#1785](https://github.com/informalsystems/hermes/issues/1785))
+    ([#1785](https://github.com/soohoio/hermes/issues/1785))
 - [Relayer CLI](crates/relayer-cli)
   - Add custom options to the `create client` command.
-    ([#836](https://github.com/informalsystems/hermes/issues/836))
+    ([#836](https://github.com/soohoio/hermes/issues/836))
   - Make the deposit denomination configurable in `tx raw upgrade-chain` via a new `--denom` flag.
-    ([#1662](https://github.com/informalsystems/hermes/issues/1662))
+    ([#1662](https://github.com/soohoio/hermes/issues/1662))
   - Update to abscissa_core 0.6.0-rc.0 and clap 3.x
-    ([#1777](https://github.com/informalsystems/hermes/pull/1777))
+    ([#1777](https://github.com/soohoio/hermes/pull/1777))
   - Add `completions` CLI command to generate shell auto-completion scripts.
-    ([#1789](https://github.com/informalsystems/hermes/pull/1789))
+    ([#1789](https://github.com/soohoio/hermes/pull/1789))
 
 ## v0.10.0
 *January 13th, 2021*
@@ -1253,18 +1253,18 @@ The relayer now also supports dynamic versions in channel open handshake (which 
 
 - General
   - Update MSRV to Rust 1.57
-    ([#1660](https://github.com/informalsystems/hermes/pull/1660))
+    ([#1660](https://github.com/soohoio/hermes/pull/1660))
   - Pin tendermint-rs dependencies to =0.23.2
-    ([#1665](https://github.com/informalsystems/hermes/pull/1665))
+    ([#1665](https://github.com/soohoio/hermes/pull/1665))
 - [IBC Modules](https://github.com/cosmos/ibc-rs)
   - Add the `frozen_height()` method to the `ClientState` trait (includes breaking changes to the Tendermint `ClientState` API).
     ([#65](https://github.com/cosmos/ibc-rs/issues/65))
   - Remove `Timestamp` API that depended on the `chrono` crate:
-    ([#1665](https://github.com/informalsystems/hermes/pull/1665)):
+    ([#1665](https://github.com/soohoio/hermes/pull/1665)):
     - `Timestamp::from_datetime`; use `From<tendermint::Time>`
     - `Timestamp::as_datetime`, superseded by `Timestamp::into_datetime`
 - [Relayer Library](crates/relayer)
-  - Improve spawning of supervisor worker tasks ([#1656](https://github.com/informalsystems/hermes/pull/1656))
+  - Improve spawning of supervisor worker tasks ([#1656](https://github.com/soohoio/hermes/pull/1656))
     - The `Supervisor` struct is removed.
     - Supervisor is now spawned using the `spawn_supervisor` function.
 - [Relayer CLI](crates/relayer-cli)
@@ -1274,8 +1274,8 @@ The relayer now also supports dynamic versions in channel open handshake (which 
     to `--channel-version`, with the old name still supported as an alias.
     Additionally, the `-h` short flag on many commands is now `-H` to avoid
     clashes with the clap-provided short flag for help.
-    ([#1576](https://github.com/informalsystems/hermes/pull/1576),
-    [#1743](https://github.com/informalsystems/hermes/pull/1743))
+    ([#1576](https://github.com/soohoio/hermes/pull/1576),
+    [#1743](https://github.com/soohoio/hermes/pull/1743))
 
 ### BUG FIXES
 
@@ -1289,26 +1289,26 @@ The relayer now also supports dynamic versions in channel open handshake (which 
   - Fix conversion to Protocol Buffers of `ClientState`'s `frozen_height` field.
     ([#62](https://github.com/cosmos/ibc-rs/issues/62))
 - [Relayer Library](crates/relayer)
-  - Handle expired client errors in workers ([#1543](https://github.com/informalsystems/hermes/issues/1543))
-  - Perform `execute_schedule` after handling packet commands in packet worker ([#1715](https://github.com/informalsystems/hermes/issues/1715))
-  - Do not spawn detect misbehavior task if it is disabled in config [#1750](https://github.com/informalsystems/hermes/issues/1750)
+  - Handle expired client errors in workers ([#1543](https://github.com/soohoio/hermes/issues/1543))
+  - Perform `execute_schedule` after handling packet commands in packet worker ([#1715](https://github.com/soohoio/hermes/issues/1715))
+  - Do not spawn detect misbehavior task if it is disabled in config [#1750](https://github.com/soohoio/hermes/issues/1750)
 
 ### FEATURES
 
 - General
-  - Extend CI test suite to include E2E tests using Gaia v6.0.0 [#1550](https://github.com/informalsystems/hermes/issues/1550)
+  - Extend CI test suite to include E2E tests using Gaia v6.0.0 [#1550](https://github.com/soohoio/hermes/issues/1550)
   - Added the `extra_wallets` parameter to `gm` to create additional funded wallets.
   - Added the possibility of JSON output to `gm` by setting the environment variable `OUTPUT=json`.
   - Added support for fee granters through config file
-    ([#1633](https://github.com/informalsystems/hermes/issues/1633))
+    ([#1633](https://github.com/soohoio/hermes/issues/1633))
 - [IBC Modules](https://github.com/cosmos/ibc-rs)
   - Implement proof verification for Tendermint client (ICS07).
-    ([#1583](https://github.com/informalsystems/hermes/pull/1583))
+    ([#1583](https://github.com/soohoio/hermes/pull/1583))
 - [Relayer Library](crates/relayer)
   - Added a recovery mechanism to automatically retry or drop tx upon account
-    sequence mismatch errors ([#1264](https://github.com/informalsystems/hermes/issues/1264))
+    sequence mismatch errors ([#1264](https://github.com/soohoio/hermes/issues/1264))
   - Support dynamic versions in channel open handshake & enable full support for
-    ibc-go v2 ([#1410](https://github.com/informalsystems/hermes/issues/1410))
+    ibc-go v2 ([#1410](https://github.com/soohoio/hermes/issues/1410))
   - Allow custom proof-specs in chain config
     ([#67](https://github.com/cosmos/ibc-rs/issues/67))
 
@@ -1316,17 +1316,17 @@ The relayer now also supports dynamic versions in channel open handshake (which 
 
 - General
   - Update `CONTRIBUTING.md` for latest version of unclog
-    ([#1634](https://github.com/informalsystems/hermes/pull/1634))
+    ([#1634](https://github.com/soohoio/hermes/pull/1634))
 - [IBC Modules](https://github.com/cosmos/ibc-rs)
   - More conventional ad-hoc conversion methods on `Timestamp`
-    ([#1665](https://github.com/informalsystems/hermes/pull/1665)):
+    ([#1665](https://github.com/soohoio/hermes/pull/1665)):
   - `Timestamp::nanoseconds` replaces `Timestamp::as_nanoseconds`
   - `Timestamp::into_datetime` substitutes `Timestamp::as_datetime`
 - [Relayer CLI](crates/relayer-cli)
   - Improve performance of standalone commands by starting the event monitor on-demand
-    ([#1063](https://github.com/informalsystems/hermes/issues/1063))
+    ([#1063](https://github.com/soohoio/hermes/issues/1063))
   - Increase the default for `max_gas` from `300_000` to `400_000`
-    ([#1636](https://github.com/informalsystems/hermes/pull/1636))
+    ([#1636](https://github.com/soohoio/hermes/pull/1636))
 
 ## v0.9.0, the “Zamfir” release
 *November 23rd, 2021*
@@ -1379,7 +1379,7 @@ then on top of the changes above, `mode.connections.enabled` and `mode.channels.
 
 [See the relevant section][config-mode-toml] of the documented `config.toml` file in the repository for more details.
 
-[config-mode-toml]: https://github.com/informalsystems/hermes/blob/v0.9.0/config.toml#L9-L59
+[config-mode-toml]: https://github.com/soohoio/hermes/blob/v0.9.0/config.toml#L9-L59
 
 
 ### BUG FIXES
@@ -1394,12 +1394,12 @@ then on top of the changes above, `mode.connections.enabled` and `mode.channels.
 
 - General
   - Support for compatibility with gaia Vega upgrade (protos matching ibc-go v1.2.2 and SDK v0.44.3)
-    ([#1408](https://github.com/informalsystems/hermes/issues/1408))
+    ([#1408](https://github.com/soohoio/hermes/issues/1408))
   - Optimize the WS client to subscribe to IBC events only (instead of all Tx
-    events) ([#1534](https://github.com/informalsystems/hermes/issues/1534))
+    events) ([#1534](https://github.com/soohoio/hermes/issues/1534))
 - [Relayer Library](crates/relayer)
   - Allow for more granular control of relaying modes. The `mode` configuration section replaces the `strategy` option.
-    ([#1518](https://github.com/informalsystems/hermes/issues/1518))
+    ([#1518](https://github.com/soohoio/hermes/issues/1518))
 
 ### IMPROVEMENTS
 
@@ -1407,20 +1407,20 @@ then on top of the changes above, `mode.connections.enabled` and `mode.channels.
   - Upgrade IBC-rs TLA+ MBT models to modern Apalache type annotations
     ([#69](https://github.com/cosmos/ibc-rs/issues/69))
   - Add `architecture.md` doc that gives a high-level overview of the structure of the codebase
-  - Add some module-level documentation ([#1556](https://github.com/informalsystems/hermes/pull/1556))
+  - Add some module-level documentation ([#1556](https://github.com/soohoio/hermes/pull/1556))
 - [IBC Modules](https://github.com/cosmos/ibc-rs)
   - Derive `PartialEq` and `Eq` on `IbcEvent` and inner types
     ([#1546](https://github.com/cosmos/ibc-rs/issues/68))
 - [Relayer Library](crates/relayer)
   - The relayer will now avoid submitting a tx after the simulation failed
     (in all but one special case) to avoid wasting fees unnecessarily
-    ([#1479](https://github.com/informalsystems/hermes/issues/1479))
+    ([#1479](https://github.com/soohoio/hermes/issues/1479))
 - [Relayer CLI](crates/relayer-cli)
   - Output errors on a single line if ANSI output is disabled
-    ([#1529](https://github.com/informalsystems/hermes/issues/1529))
+    ([#1529](https://github.com/soohoio/hermes/issues/1529))
   - Compute fee amount using big integers to prevent overflow
     when using denominations with high decimal places
-    ([#1555](https://github.com/informalsystems/hermes/issues/1555))
+    ([#1555](https://github.com/soohoio/hermes/issues/1555))
 
 ## v0.8.0
 *October 29th, 2021*
@@ -1439,32 +1439,32 @@ For Cosmos-SDK chains a good approximation is `timeout_propose` + `timeout_commi
 ### BREAKING CHANGES
 
 - Update MSRV to Rust 1.56 and use the 2021 edition
-  ([#1519](https://github.com/informalsystems/hermes/issues/1519))
+  ([#1519](https://github.com/soohoio/hermes/issues/1519))
 
 ### BUG FIXES
 
-- Fix for "new header has a time from the future" chain error which would arise due to clock drift ([#1445](https://github.com/informalsystems/hermes/issues/1445)):
+- Fix for "new header has a time from the future" chain error which would arise due to clock drift ([#1445](https://github.com/soohoio/hermes/issues/1445)):
   * Added new config param `max_block_time` to prevent the problem for appearing in newly-created clients.
   * Added a synchronous waiting in client update logic to allow destination chain to reach a new height
     before submitting a client update message.
 - Ensure Hermes does not send timeouts for packets that have not expired yet
-    ([#1504](https://github.com/informalsystems/hermes/issues/1504))
+    ([#1504](https://github.com/soohoio/hermes/issues/1504))
 
 ### IMPROVEMENTS
 
 - General
   - Update to official releases of `prost` 0.9 and `tonic` 0.6
-    ([#1502](https://github.com/informalsystems/hermes/issues/1502))
+    ([#1502](https://github.com/soohoio/hermes/issues/1502))
 - [IBC Modules](https://github.com/cosmos/ibc-rs)
   - Support for converting `ibc::events::IbcEvent` into `tendermint::abci::Event`
     ([#81](https://github.com/cosmos/ibc-rs/issues/81))
   - Restructure the layout of the `ibc` crate to match `ibc-go`'s [layout](https://github.com/cosmos/ibc-go#contents)
-    ([#1436](https://github.com/informalsystems/hermes/issues/1436))
+    ([#1436](https://github.com/soohoio/hermes/issues/1436))
   - Implement `FromStr<Path>` to enable string-encoded paths to be converted into Path identifiers
-    ([#1460](https://github.com/informalsystems/hermes/issues/1460))
+    ([#1460](https://github.com/soohoio/hermes/issues/1460))
 - [Relayer Library](crates/relayer)
   - Improve performance of misbehaviour checks triggered by an `UpdateClient` event
-    ([#1417](https://github.com/informalsystems/hermes/issues/1417))
+    ([#1417](https://github.com/soohoio/hermes/issues/1417))
 
 ## v0.8.0-pre.1
 *October 22nd, 2021*
@@ -1481,9 +1481,9 @@ for specifying a prefix to be included in the memo of each transaction submitted
 by Hermes.
 
 Moreover, Hermes is now able to handle `SendPacket` events originating from Tendermint
-ABCI's `BeginBlock` and `EndBlock` methods ([#1231](https://github.com/informalsystems/hermes/issues/1231)).
+ABCI's `BeginBlock` and `EndBlock` methods ([#1231](https://github.com/soohoio/hermes/issues/1231)).
 
-[memo]: https://github.com/informalsystems/hermes/blob/v0.8.0-pre.1/config.toml#L161-L165
+[memo]: https://github.com/soohoio/hermes/blob/v0.8.0-pre.1/config.toml#L161-L165
 
 ### BREAKING CHANGES
 
@@ -1496,24 +1496,24 @@ ABCI's `BeginBlock` and `EndBlock` methods ([#1231](https://github.com/informals
 
 - General
   - Add support for the `tx.memo` field
-    ([#1433](https://github.com/informalsystems/hermes/issues/1433))
+    ([#1433](https://github.com/soohoio/hermes/issues/1433))
 - [IBC Modules](https://github.com/cosmos/ibc-rs)
   - Add ICS07 verification functionality by using `tendermint-light-client`
     ([#71](https://github.com/cosmos/ibc-rs/issues/71))
 - [Relayer Library](crates/relayer)
   - Add a `default_gas` setting to be used for submitting a tx when tx simulation
-    fails ([#1457](https://github.com/informalsystems/hermes/issues/1457))
+    fails ([#1457](https://github.com/soohoio/hermes/issues/1457))
   - Update compatibility check for IBC-Go dependency
-    ([#1464](https://github.com/informalsystems/hermes/issues/1464))
+    ([#1464](https://github.com/soohoio/hermes/issues/1464))
 
 ### IMPROVEMENTS
 
 - [Relayer Library](crates/relayer)
   - Handle SendPacket events originating from Tendermint ABCI's BeginBlock
-    and EndBlock methods ([#1231](https://github.com/informalsystems/hermes/issues/1231))
+    and EndBlock methods ([#1231](https://github.com/soohoio/hermes/issues/1231))
   - Improve error message when `create client` fails and add a health
     check for the trusting period being smaller than the unbonding period
-    ([#1440](https://github.com/informalsystems/hermes/issues/1440))
+    ([#1440](https://github.com/soohoio/hermes/issues/1440))
 
 ## v0.7.3
 *October 4th, 2021*
@@ -1529,16 +1529,16 @@ It also improves the handling of account sequence numbers
   - Fix a bug introduced in Hermes v0.7.0 where tx simulations would fail on
     chains based on Cosmos SDK 0.42. This would cause Hermes to use the max
     gas specified in the config when submitted the tx, leading to high fees.
-    ([#1345](https://github.com/informalsystems/hermes/pull/1345))
+    ([#1345](https://github.com/soohoio/hermes/pull/1345))
   - Only increase cached account sequence number when `broadcast_tx_sync` fails,
     therefore ensuring that the cached sequence number stays in sync with the
-    node. ([#1402](https://github.com/informalsystems/hermes/issues/1402))
+    node. ([#1402](https://github.com/soohoio/hermes/issues/1402))
 
 ### IMPROVEMENTS
 
 - [Relayer Library](crates/relayer)
   - Set default trusting period to be 2/3 of unbonding period for Cosmos chains
-    ([#1392](https://github.com/informalsystems/hermes/pull/1392))
+    ([#1392](https://github.com/soohoio/hermes/pull/1392))
 
 ## v0.7.2
 *September 24th, 2021*
@@ -1550,23 +1550,23 @@ It also bumps the compatibility to Cosmos SDK 0.44.
 
 ### FEATURES
 
-- Support for chains which use Secp256k1 signatures in consensus votes ([#1155](https://github.com/informalsystems/hermes/issues/1155))
-- Modified packet worker to use stubborn strategy ([#1290](https://github.com/informalsystems/hermes/issues/1290))
-- Skip `consensus_heights` query in `update_client` when possible ([#1362](https://github.com/informalsystems/hermes/issues/1362))
-- Support for disabling tx confirmation mechanism ([#1380](https://github.com/informalsystems/hermes/issues/1380))
+- Support for chains which use Secp256k1 signatures in consensus votes ([#1155](https://github.com/soohoio/hermes/issues/1155))
+- Modified packet worker to use stubborn strategy ([#1290](https://github.com/soohoio/hermes/issues/1290))
+- Skip `consensus_heights` query in `update_client` when possible ([#1362](https://github.com/soohoio/hermes/issues/1362))
+- Support for disabling tx confirmation mechanism ([#1380](https://github.com/soohoio/hermes/issues/1380))
 
 - [gm](https://github.com/informalsystems/gm)
   - Binaries in the config can be defined as URLs now.
-  - Add the option to set gm-lib path via the `$GM_LIB` environment variable ([#1365](https://github.com/informalsystems/hermes/issues/1365))
+  - Add the option to set gm-lib path via the `$GM_LIB` environment variable ([#1365](https://github.com/soohoio/hermes/issues/1365))
 
 ### IMPROVEMENTS
 
-- Use `core` and `alloc` crates for `no_std` compatibility ([#1156](https://github.com/informalsystems/hermes/pull/1156))
+- Use `core` and `alloc` crates for `no_std` compatibility ([#1156](https://github.com/soohoio/hermes/pull/1156))
 - Improve performance of health check, and only perform it on `hermes start`.
-  Add a `hermes health-check` command. ([#1336](https://github.com/informalsystems/hermes/issues/1336))
-- Treat pre-releases of the Cosmos SDK as their standard version in compatibility check ([#1337](https://github.com/informalsystems/hermes/issues/1337))
-- Bump Cosmos SDK compatibility to v0.44.0 ([#1344](https://github.com/informalsystems/hermes/issues/1344))
-- Improve reliability of health check ([#1382](https://github.com/informalsystems/hermes/issues/1376))
+  Add a `hermes health-check` command. ([#1336](https://github.com/soohoio/hermes/issues/1336))
+- Treat pre-releases of the Cosmos SDK as their standard version in compatibility check ([#1337](https://github.com/soohoio/hermes/issues/1337))
+- Bump Cosmos SDK compatibility to v0.44.0 ([#1344](https://github.com/soohoio/hermes/issues/1344))
+- Improve reliability of health check ([#1382](https://github.com/soohoio/hermes/issues/1376))
 
 ## v0.7.1
 *September 14th, 2021*
@@ -1576,20 +1576,20 @@ This release also fixes a bug where the chain runtime within the relayer would c
 
 ### BUG FIXES
 
-- Fix header decoding error which resulted in killing the chain runtime ([#1342](https://github.com/informalsystems/hermes/issues/1342))
+- Fix header decoding error which resulted in killing the chain runtime ([#1342](https://github.com/soohoio/hermes/issues/1342))
 
 - [gm](https://github.com/informalsystems/gm)
   - Fix gaiad keys add prints to stderr instead of stdout in SDK 0.43 ([#1312])
   - Bumped default `rpc_timeout` in Hermes config to 5 seconds ([#1312])
 
-[#1312]: https://github.com/informalsystems/hermes/issues/1312
+[#1312]: https://github.com/soohoio/hermes/issues/1312
 
 ### FEATURES
 
 - Added post-Stargate (v0.5+) Ethermint support ([#1267] [#1071])
 
-[#1267]: https://github.com/informalsystems/hermes/issues/1267
-[#1071]: https://github.com/informalsystems/hermes/issues/1071
+[#1267]: https://github.com/soohoio/hermes/issues/1267
+[#1071]: https://github.com/soohoio/hermes/issues/1071
 
 ### IMPROVEMENTS
 
@@ -1603,9 +1603,9 @@ This release also fixes a bug where the chain runtime within the relayer would c
   - Clean up modules' errors ([#72])
 
 [#73]: https://github.com/cosmos/ibc-rs/issues/73
-[#1281]: https://github.com/informalsystems/hermes/issues/1281
-[#1311]: https://github.com/informalsystems/hermes/issues/1311
-[#1319]: https://github.com/informalsystems/hermes/issues/1319
+[#1281]: https://github.com/soohoio/hermes/issues/1281
+[#1311]: https://github.com/soohoio/hermes/issues/1311
+[#1319]: https://github.com/soohoio/hermes/issues/1319
 [#72]: https://github.com/cosmos/ibc-rs/issues/72
 
 ## v0.7.0
@@ -1624,7 +1624,7 @@ Additionnally, Hermes now includes a REST server which exposes the relayer's int
   - Fix silent exit when requirements are missing
 
 [#74]: https://github.com/cosmos/ibc-rs/issues/74
-[#1261]: https://github.com/informalsystems/hermes/issues/1261
+[#1261]: https://github.com/soohoio/hermes/issues/1261
 
 ### FEATURES
 
@@ -1640,12 +1640,12 @@ Additionnally, Hermes now includes a REST server which exposes the relayer's int
   - Spawn packet workers only when there are outstanding packets or acknowledgements to relay ([#901])
   - Upgrade to Cosmos SDK proto (v0.43.0) & ibc-go proto (v1.0.0) ([#948])
 
-[#843]: https://github.com/informalsystems/hermes/issues/843
-[#901]: https://github.com/informalsystems/hermes/issues/901
-[#948]: https://github.com/informalsystems/hermes/pull/948
-[#1065]: https://github.com/informalsystems/hermes/issues/1065
-[#1175]: https://github.com/informalsystems/hermes/issues/1175
-[#1287]: https://github.com/informalsystems/hermes/issues/1287
+[#843]: https://github.com/soohoio/hermes/issues/843
+[#901]: https://github.com/soohoio/hermes/issues/901
+[#948]: https://github.com/soohoio/hermes/pull/948
+[#1065]: https://github.com/soohoio/hermes/issues/1065
+[#1175]: https://github.com/soohoio/hermes/issues/1175
+[#1287]: https://github.com/soohoio/hermes/issues/1287
 
 ### IMPROVEMENTS
 
@@ -1662,12 +1662,12 @@ Additionnally, Hermes now includes a REST server which exposes the relayer's int
 - [ibc](https://github.com/cosmos/ibc-rs)
   - Implement `ics02_client::client_consensus::ConsensusState` for `AnyConsensusState` ([#1297])
 
-[#1124]: https://github.com/informalsystems/hermes/issues/1124
-[#1132]: https://github.com/informalsystems/hermes/issues/1132
-[#1191]: https://github.com/informalsystems/hermes/issues/1191
-[#1249]: https://github.com/informalsystems/hermes/pull/1249
-[#1265]: https://github.com/informalsystems/hermes/issues/1265
-[#1297]: https://github.com/informalsystems/hermes/issues/1297
+[#1124]: https://github.com/soohoio/hermes/issues/1124
+[#1132]: https://github.com/soohoio/hermes/issues/1132
+[#1191]: https://github.com/soohoio/hermes/issues/1191
+[#1249]: https://github.com/soohoio/hermes/pull/1249
+[#1265]: https://github.com/soohoio/hermes/issues/1265
+[#1297]: https://github.com/soohoio/hermes/issues/1297
 
 ## v0.6.2
 *August 2nd, 2021*
@@ -1682,29 +1682,29 @@ Upgrading from version `0.6.1` to `0.6.2` requires no explicit steps.
 
 - Add missing `Protobuf` impl for `ics03_connection::connection::Counterparty` ([#1247])
 
-[#1247]: https://github.com/informalsystems/hermes/issues/1247
+[#1247]: https://github.com/soohoio/hermes/issues/1247
 
 ### FEATURES
 
 - Use the [`flex-error`](https://docs.rs/flex-error/) crate to define and
 handle errors ([#1158])
 
-[#1158]: https://github.com/informalsystems/hermes/issues/1158
+[#1158]: https://github.com/soohoio/hermes/issues/1158
 - Augment ClientCreationFailed error with chain id and WS address ([#1020])
 
-[#1020]: https://github.com/informalsystems/hermes/issues/1020
+[#1020]: https://github.com/soohoio/hermes/issues/1020
 - Improve the error message for config file parse errors ([#1021])
 
-[#1021]: https://github.com/informalsystems/hermes/issues/1021
+[#1021]: https://github.com/soohoio/hermes/issues/1021
 - Fix for upgrade CLI regression using new type ics02::TrustThreshold ([#1229])
 
-[#1229]: https://github.com/informalsystems/hermes/issues/1229
+[#1229]: https://github.com/soohoio/hermes/issues/1229
 
 ### IMPROVEMENTS
 
 - Add semantic validation of of `max_tx_size` and `max_num_msg` config options ([#1245])
 
-[#1245]: https://github.com/informalsystems/hermes/issues/1245
+[#1245]: https://github.com/soohoio/hermes/issues/1245
 
 ## v0.6.1
 *July 22nd, 2021*
@@ -1745,15 +1745,15 @@ Upgrading from version `0.6.0` to `0.6.1` requires no explicit steps.
   - Recover from missed RPC events after WebSocket subscription is closed by Tendermint ([#1196])
 
 
-[#1094]: https://github.com/informalsystems/hermes/issues/1094
-[#1114]: https://github.com/informalsystems/hermes/issues/1114
+[#1094]: https://github.com/soohoio/hermes/issues/1094
+[#1114]: https://github.com/soohoio/hermes/issues/1114
 [#79]: https://github.com/cosmos/ibc-rs/issues/79
 [#78]: https://github.com/cosmos/ibc-rs/issues/78
-[#1196]: https://github.com/informalsystems/hermes/issues/1196
+[#1196]: https://github.com/soohoio/hermes/issues/1196
 [#77]: https://github.com/cosmos/ibc-rs/issues/77
-[#1200]: https://github.com/informalsystems/hermes/issues/1200
+[#1200]: https://github.com/soohoio/hermes/issues/1200
 [#75]: https://github.com/cosmos/ibc-rs/issues/75
-[#1229]: https://github.com/informalsystems/hermes/issues/1229
+[#1229]: https://github.com/soohoio/hermes/issues/1229
 
 
 ## v0.6.0
@@ -1781,7 +1781,7 @@ with the changes described below.
 
 #### Added inline documentation for all options.
 
-Please have a look around the [config.toml](https://github.com/informalsystems/hermes/blob/v0.6.0/config.toml) directly.
+Please have a look around the [config.toml](https://github.com/soohoio/hermes/blob/v0.6.0/config.toml) directly.
 
 #### Added a packet filtering mechanism based on channel/port identifiers
 
@@ -1837,19 +1837,19 @@ The full list of changes is described below.
   - Fix for schedule refreshing bug ([#1143])
 
 
-[#69]: https://github.com/informalsystems/hermes/issues/69
-[#600]: https://github.com/informalsystems/hermes/issues/600
-[#697]: https://github.com/informalsystems/hermes/issues/697
-[#1062]: https://github.com/informalsystems/hermes/issues/1062
-[#1117]: https://github.com/informalsystems/hermes/issues/1117
-[#1057]: https://github.com/informalsystems/hermes/issues/1057
-[#1125]: https://github.com/informalsystems/hermes/issues/1125
-[#1124]: https://github.com/informalsystems/hermes/issues/1124
-[#1127]: https://github.com/informalsystems/hermes/issues/1127
-[#1140]: https://github.com/informalsystems/hermes/issues/1140
-[#1141]: https://github.com/informalsystems/hermes/issues/1141
-[#1143]: https://github.com/informalsystems/hermes/issues/1143
-[#1165]: https://github.com/informalsystems/hermes/issues/1165
+[#69]: https://github.com/soohoio/hermes/issues/69
+[#600]: https://github.com/soohoio/hermes/issues/600
+[#697]: https://github.com/soohoio/hermes/issues/697
+[#1062]: https://github.com/soohoio/hermes/issues/1062
+[#1117]: https://github.com/soohoio/hermes/issues/1117
+[#1057]: https://github.com/soohoio/hermes/issues/1057
+[#1125]: https://github.com/soohoio/hermes/issues/1125
+[#1124]: https://github.com/soohoio/hermes/issues/1124
+[#1127]: https://github.com/soohoio/hermes/issues/1127
+[#1140]: https://github.com/soohoio/hermes/issues/1140
+[#1141]: https://github.com/soohoio/hermes/issues/1141
+[#1143]: https://github.com/soohoio/hermes/issues/1143
+[#1165]: https://github.com/soohoio/hermes/issues/1165
 
 
 ## v0.5.0
@@ -1902,19 +1902,19 @@ substantially by switching over to `tx_broadcast_sync` for submitting transactio
 - [ibc-relayer-cli]
   - Removed `--coin-type` option from `keys restore` command. Use `--hd-path` instead ([#1049])
 
-[#673]: https://github.com/informalsystems/hermes/issues/673
-[#821]: https://github.com/informalsystems/hermes/issues/821
-[#877]: https://github.com/informalsystems/hermes/issues/877
-[#919]: https://github.com/informalsystems/hermes/issues/919
-[#930]: https://github.com/informalsystems/hermes/issues/930
-[#977]: https://github.com/informalsystems/hermes/issues/977
-[#978]: https://github.com/informalsystems/hermes/issues/978
-[#986]: https://github.com/informalsystems/hermes/issues/986
-[#1038]: https://github.com/informalsystems/hermes/issues/1038
-[#1049]: https://github.com/informalsystems/hermes/issues/1049
-[#1050]: https://github.com/informalsystems/hermes/issues/1050
-[#1064]: https://github.com/informalsystems/hermes/issues/1064
-[#1100]: https://github.com/informalsystems/hermes/issues/1100
+[#673]: https://github.com/soohoio/hermes/issues/673
+[#821]: https://github.com/soohoio/hermes/issues/821
+[#877]: https://github.com/soohoio/hermes/issues/877
+[#919]: https://github.com/soohoio/hermes/issues/919
+[#930]: https://github.com/soohoio/hermes/issues/930
+[#977]: https://github.com/soohoio/hermes/issues/977
+[#978]: https://github.com/soohoio/hermes/issues/978
+[#986]: https://github.com/soohoio/hermes/issues/986
+[#1038]: https://github.com/soohoio/hermes/issues/1038
+[#1049]: https://github.com/soohoio/hermes/issues/1049
+[#1050]: https://github.com/soohoio/hermes/issues/1050
+[#1064]: https://github.com/soohoio/hermes/issues/1064
+[#1100]: https://github.com/soohoio/hermes/issues/1100
 
 ## v0.4.0
 *June 3rd, 2021*
@@ -1972,23 +1972,23 @@ substantially by switching over to `tx_broadcast_sync` for submitting transactio
 - [ibc-relayer-cli]
   - Promote `start-multi` command to `start` ([#911])
 
-[#822]: https://github.com/informalsystems/hermes/issues/822
-[#868]: https://github.com/informalsystems/hermes/issues/868
-[#871]: https://github.com/informalsystems/hermes/issues/871
-[#911]: https://github.com/informalsystems/hermes/issues/911
-[#972]: https://github.com/informalsystems/hermes/issues/972
-[#975]: https://github.com/informalsystems/hermes/issues/975
-[#983]: https://github.com/informalsystems/hermes/issues/983
-[#992]: https://github.com/informalsystems/hermes/issues/992
-[#996]: https://github.com/informalsystems/hermes/issues/996
-[#993]: https://github.com/informalsystems/hermes/issues/993
-[#998]: https://github.com/informalsystems/hermes/issues/998
-[#1003]: https://github.com/informalsystems/hermes/issues/1003
-[#1022]: https://github.com/informalsystems/hermes/issues/1022
-[#1026]: https://github.com/informalsystems/hermes/issues/1026
-[#1032]: https://github.com/informalsystems/hermes/issues/1032
+[#822]: https://github.com/soohoio/hermes/issues/822
+[#868]: https://github.com/soohoio/hermes/issues/868
+[#871]: https://github.com/soohoio/hermes/issues/871
+[#911]: https://github.com/soohoio/hermes/issues/911
+[#972]: https://github.com/soohoio/hermes/issues/972
+[#975]: https://github.com/soohoio/hermes/issues/975
+[#983]: https://github.com/soohoio/hermes/issues/983
+[#992]: https://github.com/soohoio/hermes/issues/992
+[#996]: https://github.com/soohoio/hermes/issues/996
+[#993]: https://github.com/soohoio/hermes/issues/993
+[#998]: https://github.com/soohoio/hermes/issues/998
+[#1003]: https://github.com/soohoio/hermes/issues/1003
+[#1022]: https://github.com/soohoio/hermes/issues/1022
+[#1026]: https://github.com/soohoio/hermes/issues/1026
+[#1032]: https://github.com/soohoio/hermes/issues/1032
 [gaiad-manager]: https://github.com/informalsystems/gm/blob/master/README.md
-[#1039]: https://github.com/informalsystems/hermes/issues/1039
+[#1039]: https://github.com/soohoio/hermes/issues/1039
 
 ## v0.3.2
 *May 21st, 2021*
@@ -2024,12 +2024,12 @@ Docker images to Docker Hub.
 
 > Nothing
 
-[#868]: https://github.com/informalsystems/hermes/issues/868
-[#894]: https://github.com/informalsystems/hermes/pull/894
-[#957]: https://github.com/informalsystems/hermes/issues/957
-[#960]: https://github.com/informalsystems/hermes/issues/960
-[#963]: https://github.com/informalsystems/hermes/issues/963
-[#967]: https://github.com/informalsystems/hermes/issues/967
+[#868]: https://github.com/soohoio/hermes/issues/868
+[#894]: https://github.com/soohoio/hermes/pull/894
+[#957]: https://github.com/soohoio/hermes/issues/957
+[#960]: https://github.com/soohoio/hermes/issues/960
+[#963]: https://github.com/soohoio/hermes/issues/963
+[#967]: https://github.com/soohoio/hermes/issues/967
 
 [hermes-docker]: https://hub.docker.com/r/informalsystems/hermes
 
@@ -2067,16 +2067,16 @@ as well as support Protobuf-encoded keys.
 > Nothing
 
 
-[#875]: https://github.com/informalsystems/hermes/issues/875
-[#920]: https://github.com/informalsystems/hermes/issues/920
-[#902]: https://github.com/informalsystems/hermes/issues/902
-[#921]: https://github.com/informalsystems/hermes/issues/921
-[#925]: https://github.com/informalsystems/hermes/issues/925
-[#927]: https://github.com/informalsystems/hermes/issues/927
-[#932]: https://github.com/informalsystems/hermes/issues/932
-[#934]: https://github.com/informalsystems/hermes/issues/934
-[#937]: https://github.com/informalsystems/hermes/issues/937
-[#943]: https://github.com/informalsystems/hermes/issues/943
+[#875]: https://github.com/soohoio/hermes/issues/875
+[#920]: https://github.com/soohoio/hermes/issues/920
+[#902]: https://github.com/soohoio/hermes/issues/902
+[#921]: https://github.com/soohoio/hermes/issues/921
+[#925]: https://github.com/soohoio/hermes/issues/925
+[#927]: https://github.com/soohoio/hermes/issues/927
+[#932]: https://github.com/soohoio/hermes/issues/932
+[#934]: https://github.com/soohoio/hermes/issues/934
+[#937]: https://github.com/soohoio/hermes/issues/937
+[#943]: https://github.com/soohoio/hermes/issues/943
 
 
 ## v0.3.0
@@ -2133,21 +2133,21 @@ and periodically refresh IBC clients. The relayer now also supports [ICS 027 (In
 
 
 [#83]: https://github.com/cosmos/ibc-rs/issues/83
-[#784]: https://github.com/informalsystems/hermes/issues/784
-[#785]: https://github.com/informalsystems/hermes/issues/785
-[#786]: https://github.com/informalsystems/hermes/issues/786
+[#784]: https://github.com/soohoio/hermes/issues/784
+[#785]: https://github.com/soohoio/hermes/issues/785
+[#786]: https://github.com/soohoio/hermes/issues/786
 [#82]: https://github.com/cosmos/ibc-rs/issues/82
-[#811]: https://github.com/informalsystems/hermes/issues/811
-[#840]: https://github.com/informalsystems/hermes/issues/840
-[#851]: https://github.com/informalsystems/hermes/issues/851
-[#9]: https://github.com/cosmos/ibc-proto-rs/issues/9
-[#862]: https://github.com/informalsystems/hermes/issues/862
-[#863]: https://github.com/informalsystems/hermes/issues/863
-[#869]: https://github.com/informalsystems/hermes/issues/869
-[#871]: https://github.com/informalsystems/hermes/issues/871
-[#873]: https://github.com/informalsystems/hermes/issues/873
+[#811]: https://github.com/soohoio/hermes/issues/811
+[#840]: https://github.com/soohoio/hermes/issues/840
+[#851]: https://github.com/soohoio/hermes/issues/851
+[#9]: https://github.com/soohoio/ibc-proto-rs/issues/9
+[#862]: https://github.com/soohoio/hermes/issues/862
+[#863]: https://github.com/soohoio/hermes/issues/863
+[#869]: https://github.com/soohoio/hermes/issues/869
+[#871]: https://github.com/soohoio/hermes/issues/871
+[#873]: https://github.com/soohoio/hermes/issues/873
 [#80]: https://github.com/cosmos/ibc-rs/issues/80
-[#909]: https://github.com/informalsystems/hermes/issues/909
+[#909]: https://github.com/soohoio/hermes/issues/909
 
 ## v0.2.0
 *April 14th, 2021*
@@ -2233,41 +2233,41 @@ This release also finalizes the initial implementation of all the ICS 004 handle
     - Remove the light add and light rm commands ([#793])
 
 
-[#352]: https://github.com/informalsystems/hermes/issues/352
+[#352]: https://github.com/soohoio/hermes/issues/352
 [#101]: https://github.com/cosmos/ibc-rs/issues/101
-[#357]: https://github.com/informalsystems/hermes/issues/357
-[#416]: https://github.com/informalsystems/hermes/issues/416
-[#561]: https://github.com/informalsystems/hermes/issues/561
-[#550]: https://github.com/informalsystems/hermes/issues/550
-[#599]: https://github.com/informalsystems/hermes/issues/599
-[#630]: https://github.com/informalsystems/hermes/issues/630
-[#632]: https://github.com/informalsystems/hermes/issues/632
-[#640]: https://github.com/informalsystems/hermes/issues/640
-[#672]: https://github.com/informalsystems/hermes/issues/672
-[#673]: https://github.com/informalsystems/hermes/issues/673
-[#675]: https://github.com/informalsystems/hermes/issues/675
-[#685]: https://github.com/informalsystems/hermes/issues/685
-[#689]: https://github.com/informalsystems/hermes/issues/689
+[#357]: https://github.com/soohoio/hermes/issues/357
+[#416]: https://github.com/soohoio/hermes/issues/416
+[#561]: https://github.com/soohoio/hermes/issues/561
+[#550]: https://github.com/soohoio/hermes/issues/550
+[#599]: https://github.com/soohoio/hermes/issues/599
+[#630]: https://github.com/soohoio/hermes/issues/630
+[#632]: https://github.com/soohoio/hermes/issues/632
+[#640]: https://github.com/soohoio/hermes/issues/640
+[#672]: https://github.com/soohoio/hermes/issues/672
+[#673]: https://github.com/soohoio/hermes/issues/673
+[#675]: https://github.com/soohoio/hermes/issues/675
+[#685]: https://github.com/soohoio/hermes/issues/685
+[#689]: https://github.com/soohoio/hermes/issues/689
 [#87]: https://github.com/cosmos/ibc-rs/issues/87
-[#699]: https://github.com/informalsystems/hermes/issues/699
-[#700]: https://github.com/informalsystems/hermes/pull/700
-[#715]: https://github.com/informalsystems/hermes/issues/715
-[#734]: https://github.com/informalsystems/hermes/issues/734
+[#699]: https://github.com/soohoio/hermes/issues/699
+[#700]: https://github.com/soohoio/hermes/pull/700
+[#715]: https://github.com/soohoio/hermes/issues/715
+[#734]: https://github.com/soohoio/hermes/issues/734
 [#85]: https://github.com/cosmos/ibc-rs/issues/85
-[#740]: https://github.com/informalsystems/hermes/issues/740
-[#748]: https://github.com/informalsystems/hermes/issues/748
-[#751]: https://github.com/informalsystems/hermes/issues/751
-[#752]: https://github.com/informalsystems/hermes/issues/752
-[#754]: https://github.com/informalsystems/hermes/issues/754
-[#761]: https://github.com/informalsystems/hermes/issues/761
-[#772]: https://github.com/informalsystems/hermes/issues/772
-[#770]: https://github.com/informalsystems/hermes/issues/770
-[#793]: https://github.com/informalsystems/hermes/pull/793
-[#798]: https://github.com/informalsystems/hermes/issues/798
-[#11]: https://github.com/cosmos/ibc-proto-rs/issues/11
-[#805]: https://github.com/informalsystems/hermes/issues/805
-[#806]: https://github.com/informalsystems/hermes/issues/806
-[#809]: https://github.com/informalsystems/hermes/issues/809
+[#740]: https://github.com/soohoio/hermes/issues/740
+[#748]: https://github.com/soohoio/hermes/issues/748
+[#751]: https://github.com/soohoio/hermes/issues/751
+[#752]: https://github.com/soohoio/hermes/issues/752
+[#754]: https://github.com/soohoio/hermes/issues/754
+[#761]: https://github.com/soohoio/hermes/issues/761
+[#772]: https://github.com/soohoio/hermes/issues/772
+[#770]: https://github.com/soohoio/hermes/issues/770
+[#793]: https://github.com/soohoio/hermes/pull/793
+[#798]: https://github.com/soohoio/hermes/issues/798
+[#11]: https://github.com/soohoio/ibc-proto-rs/issues/11
+[#805]: https://github.com/soohoio/hermes/issues/805
+[#806]: https://github.com/soohoio/hermes/issues/806
+[#809]: https://github.com/soohoio/hermes/issues/809
 
 
 ## v0.1.1
@@ -2318,21 +2318,21 @@ involving packet acks in a 3-chain setup. More details below.
   - Remove the `proof` option from CLI ([#572])
 
 [#104]: https://github.com/cosmos/ibc-rs/issues/104
-[#549]: https://github.com/informalsystems/hermes/issues/549
-[#560]: https://github.com/informalsystems/hermes/issues/560
-[#572]: https://github.com/informalsystems/hermes/issues/572
-[#614]: https://github.com/informalsystems/hermes/issues/614
+[#549]: https://github.com/soohoio/hermes/issues/549
+[#560]: https://github.com/soohoio/hermes/issues/560
+[#572]: https://github.com/soohoio/hermes/issues/572
+[#614]: https://github.com/soohoio/hermes/issues/614
 [#91]: https://github.com/cosmos/ibc-rs/issues/91
 [#90]: https://github.com/cosmos/ibc-rs/issues/90
-[#626]: https://github.com/informalsystems/hermes/issues/626
-[#637]: https://github.com/informalsystems/hermes/issues/637
-[#643]: https://github.com/informalsystems/hermes/pull/643
-[#665]: https://github.com/informalsystems/hermes/issues/665
-[#671]: https://github.com/informalsystems/hermes/pull/671
-[#682]: https://github.com/informalsystems/hermes/issues/682
+[#626]: https://github.com/soohoio/hermes/issues/626
+[#637]: https://github.com/soohoio/hermes/issues/637
+[#643]: https://github.com/soohoio/hermes/pull/643
+[#665]: https://github.com/soohoio/hermes/issues/665
+[#671]: https://github.com/soohoio/hermes/pull/671
+[#682]: https://github.com/soohoio/hermes/issues/682
 
 [ibc]: https://github.com/cosmos/ibc-rs/tree/main/crates/ibc
-[ibc-relayer-cli]: https://github.com/informalsystems/hermes/tree/master/crates/relayer-cli
+[ibc-relayer-cli]: https://github.com/soohoio/hermes/tree/master/crates/relayer-cli
 
 ## v0.1.0
 *February 4, 2021*
@@ -2405,41 +2405,41 @@ Noteworthy changes in this release include:
 - [ibc]
   - The `ibc::handler::Event` is removed and handlers now produce `ibc::events::IBCEvent`s ([#535])
 
-[#32]: https://github.com/informalsystems/hermes/issues/32
+[#32]: https://github.com/soohoio/hermes/issues/32
 [#135]: https://github.com/cosmos/ibc-rs/issues/135
 [#107]: https://github.com/cosmos/ibc-rs/issues/107
-[#470]: https://github.com/informalsystems/hermes/issues/470
-[#500]: https://github.com/informalsystems/hermes/issues/500
-[#501]: https://github.com/informalsystems/hermes/issues/501
-[#505]: https://github.com/informalsystems/hermes/issues/505
-[#507]: https://github.com/informalsystems/hermes/issues/507
-[#511]: https://github.com/informalsystems/hermes/pull/511
+[#470]: https://github.com/soohoio/hermes/issues/470
+[#500]: https://github.com/soohoio/hermes/issues/500
+[#501]: https://github.com/soohoio/hermes/issues/501
+[#505]: https://github.com/soohoio/hermes/issues/505
+[#507]: https://github.com/soohoio/hermes/issues/507
+[#511]: https://github.com/soohoio/hermes/pull/511
 [#96]: https://github.com/cosmos/ibc-rs/issues/96
-[#514]: https://github.com/informalsystems/hermes/issues/514
-[#517]: https://github.com/informalsystems/hermes/issues/517
-[#519]: https://github.com/informalsystems/hermes/issues/519
-[#525]: https://github.com/informalsystems/hermes/issues/525
-[#527]: https://github.com/informalsystems/hermes/issues/527
-[#535]: https://github.com/informalsystems/hermes/pull/535
-[#536]: https://github.com/informalsystems/hermes/issues/536
-[#537]: https://github.com/informalsystems/hermes/issues/537
+[#514]: https://github.com/soohoio/hermes/issues/514
+[#517]: https://github.com/soohoio/hermes/issues/517
+[#519]: https://github.com/soohoio/hermes/issues/519
+[#525]: https://github.com/soohoio/hermes/issues/525
+[#527]: https://github.com/soohoio/hermes/issues/527
+[#535]: https://github.com/soohoio/hermes/pull/535
+[#536]: https://github.com/soohoio/hermes/issues/536
+[#537]: https://github.com/soohoio/hermes/issues/537
 [#94]: https://github.com/cosmos/ibc-rs/issues/94
-[#540]: https://github.com/informalsystems/hermes/issues/540
-[#542]: https://github.com/informalsystems/hermes/issues/542
+[#540]: https://github.com/soohoio/hermes/issues/540
+[#542]: https://github.com/soohoio/hermes/issues/542
 [#93]: https://github.com/cosmos/ibc-rs/issues/93
-[#552]: https://github.com/informalsystems/hermes/issues/552
-[#553]: https://github.com/informalsystems/hermes/issues/553
-[#554]: https://github.com/informalsystems/hermes/pull/554
-[#555]: https://github.com/informalsystems/hermes/issues/555
-[#557]: https://github.com/informalsystems/hermes/issues/557
-[#563]: https://github.com/informalsystems/hermes/issues/563
-[#568]: https://github.com/informalsystems/hermes/issues/568
-[#577]: https://github.com/informalsystems/hermes/issues/577
-[#582]: https://github.com/informalsystems/hermes/issues/582
-[#583]: https://github.com/informalsystems/hermes/issues/583
-[#590]: https://github.com/informalsystems/hermes/issues/590
-[#593]: https://github.com/informalsystems/hermes/issues/593
-[#602]: https://github.com/informalsystems/hermes/issues/602
+[#552]: https://github.com/soohoio/hermes/issues/552
+[#553]: https://github.com/soohoio/hermes/issues/553
+[#554]: https://github.com/soohoio/hermes/pull/554
+[#555]: https://github.com/soohoio/hermes/issues/555
+[#557]: https://github.com/soohoio/hermes/issues/557
+[#563]: https://github.com/soohoio/hermes/issues/563
+[#568]: https://github.com/soohoio/hermes/issues/568
+[#577]: https://github.com/soohoio/hermes/issues/577
+[#582]: https://github.com/soohoio/hermes/issues/582
+[#583]: https://github.com/soohoio/hermes/issues/583
+[#590]: https://github.com/soohoio/hermes/issues/590
+[#593]: https://github.com/soohoio/hermes/issues/593
+[#602]: https://github.com/soohoio/hermes/issues/602
 
 ## v0.0.6
 *December 23, 2020*
@@ -2464,13 +2464,13 @@ the latest cosmos proto versions from `v0.40.0-rc5` (sometimes called 'stargate-
   - Relayer tests for client update (ping pong) against MockChain ([#381])
   - Relayer refactor to improve testing and add semantic dependencies ([#447])
 
-[#158]: https://github.com/informalsystems/hermes/issues/158
-[#379]: https://github.com/informalsystems/hermes/issues/379
-[#381]: https://github.com/informalsystems/hermes/issues/381
-[#443]: https://github.com/informalsystems/hermes/issues/443
-[#447]: https://github.com/informalsystems/hermes/issues/447
-[#12]: https://github.com/cosmos/ibc-proto-rs/issues/12
-[#468]: https://github.com/informalsystems/hermes/issues/468
+[#158]: https://github.com/soohoio/hermes/issues/158
+[#379]: https://github.com/soohoio/hermes/issues/379
+[#381]: https://github.com/soohoio/hermes/issues/381
+[#443]: https://github.com/soohoio/hermes/issues/443
+[#447]: https://github.com/soohoio/hermes/issues/447
+[#12]: https://github.com/soohoio/ibc-proto-rs/issues/12
+[#468]: https://github.com/soohoio/hermes/issues/468
 
 
 ## v0.0.5
@@ -2485,7 +2485,7 @@ Special thanks to external contributors for this release: @CharlyCst ([#102], [#
 - [ibc-relayer-cli]
   - Add `--all` option to `light rm` command to remove all peers for a given chain ([#431])
 
-[#431]: https://github.com/informalsystems/hermes/issues/431
+[#431]: https://github.com/soohoio/hermes/issues/431
 
 ### FEATURES
 
@@ -2534,45 +2534,45 @@ Special thanks to external contributors for this release: @CharlyCst ([#102], [#
 
 
 [#134]: https://github.com/cosmos/ibc-rs/issues/134
-[#97]: https://github.com/informalsystems/hermes/issues/97
-[#98]: https://github.com/informalsystems/hermes/issues/98
-[#274]: https://github.com/informalsystems/hermes/issues/274
-[#277]: https://github.com/informalsystems/hermes/issues/277
+[#97]: https://github.com/soohoio/hermes/issues/97
+[#98]: https://github.com/soohoio/hermes/issues/98
+[#274]: https://github.com/soohoio/hermes/issues/274
+[#277]: https://github.com/soohoio/hermes/issues/277
 [#105]: https://github.com/cosmos/ibc-rs/issues/105
-[#330]: https://github.com/informalsystems/hermes/issues/330
-[#332]: https://github.com/informalsystems/hermes/issues/332
-[#335]: https://github.com/informalsystems/hermes/pull/335
-[#336]: https://github.com/informalsystems/hermes/issues/336
-[#18]: https://github.com/cosmos/ibc-proto-rs/issues/18
+[#330]: https://github.com/soohoio/hermes/issues/330
+[#332]: https://github.com/soohoio/hermes/issues/332
+[#335]: https://github.com/soohoio/hermes/pull/335
+[#336]: https://github.com/soohoio/hermes/issues/336
+[#18]: https://github.com/soohoio/ibc-proto-rs/issues/18
 [#103]: https://github.com/cosmos/ibc-rs/issues/103
-[#346]: https://github.com/informalsystems/hermes/issues/346
+[#346]: https://github.com/soohoio/hermes/issues/346
 [#102]: https://github.com/cosmos/ibc-rs/issues/102
-[#348]: https://github.com/informalsystems/hermes/pull/348
-[#358]: https://github.com/informalsystems/hermes/issues/358
-[#359]: https://github.com/informalsystems/hermes/issues/359
-[#360]: https://github.com/informalsystems/hermes/issues/360
-[#363]: https://github.com/informalsystems/hermes/issues/363
-[#17]: https://github.com/cosmos/ibc-proto-rs/issues/17
-[#367]: https://github.com/informalsystems/hermes/issues/367
-[#368]: https://github.com/informalsystems/hermes/issues/368
-[#369]: https://github.com/informalsystems/hermes/pull/369
-[#371]: https://github.com/informalsystems/hermes/issues/371
-[#372]: https://github.com/informalsystems/hermes/issues/372
-[#373]: https://github.com/informalsystems/hermes/issues/373
-[#374]: https://github.com/informalsystems/hermes/issues/374
-[#376]: https://github.com/informalsystems/hermes/issues/376
-[#377]: https://github.com/informalsystems/hermes/issues/377
-[#378]: https://github.com/informalsystems/hermes/issues/378
-[#386]: https://github.com/informalsystems/hermes/issues/386
+[#348]: https://github.com/soohoio/hermes/pull/348
+[#358]: https://github.com/soohoio/hermes/issues/358
+[#359]: https://github.com/soohoio/hermes/issues/359
+[#360]: https://github.com/soohoio/hermes/issues/360
+[#363]: https://github.com/soohoio/hermes/issues/363
+[#17]: https://github.com/soohoio/ibc-proto-rs/issues/17
+[#367]: https://github.com/soohoio/hermes/issues/367
+[#368]: https://github.com/soohoio/hermes/issues/368
+[#369]: https://github.com/soohoio/hermes/pull/369
+[#371]: https://github.com/soohoio/hermes/issues/371
+[#372]: https://github.com/soohoio/hermes/issues/372
+[#373]: https://github.com/soohoio/hermes/issues/373
+[#374]: https://github.com/soohoio/hermes/issues/374
+[#376]: https://github.com/soohoio/hermes/issues/376
+[#377]: https://github.com/soohoio/hermes/issues/377
+[#378]: https://github.com/soohoio/hermes/issues/378
+[#386]: https://github.com/soohoio/hermes/issues/386
 [#100]: https://github.com/cosmos/ibc-rs/issues/100
-[#402]: https://github.com/informalsystems/hermes/issues/402
-[#403]: https://github.com/informalsystems/hermes/pull/403
-[#404]: https://github.com/informalsystems/hermes/issues/404
-[#419]: https://github.com/informalsystems/hermes/issues/419
-[#415]: https://github.com/informalsystems/hermes/issues/415
-[#428]: https://github.com/informalsystems/hermes/issues/428
-[changelog]: https://github.com/informalsystems/hermes/blob/master/CHANGELOG.md
-[proto-compiler]: https://github.com/cosmos/ibc-proto-rs/tree/main/tools/proto-compiler
+[#402]: https://github.com/soohoio/hermes/issues/402
+[#403]: https://github.com/soohoio/hermes/pull/403
+[#404]: https://github.com/soohoio/hermes/issues/404
+[#419]: https://github.com/soohoio/hermes/issues/419
+[#415]: https://github.com/soohoio/hermes/issues/415
+[#428]: https://github.com/soohoio/hermes/issues/428
+[changelog]: https://github.com/soohoio/hermes/blob/master/CHANGELOG.md
+[proto-compiler]: https://github.com/soohoio/ibc-proto-rs/tree/main/tools/proto-compiler
 
 ## v0.0.4
 *October 19, 2020*
@@ -2623,54 +2623,54 @@ Additional highlights:
 - [ibc-relayer-cli] Fix for client query subcommands ([#231])
 - [disclosure-log] & [spec/connection-handshake] Disclosed bugs in ICS3 version negotiation and proposed a fix ([#117], [#116])
 
-[#90]: https://github.com/informalsystems/hermes/issues/90
-[#124]: https://github.com/informalsystems/hermes/issues/124
-[#23]: https://github.com/cosmos/ibc-proto-rs/issues/23
-[#21]: https://github.com/cosmos/ibc-proto-rs/issues/21
+[#90]: https://github.com/soohoio/hermes/issues/90
+[#124]: https://github.com/soohoio/hermes/issues/124
+[#23]: https://github.com/soohoio/ibc-proto-rs/issues/23
+[#21]: https://github.com/soohoio/ibc-proto-rs/issues/21
 [#129]: https://github.com/cosmos/ibc-rs/issues/129
 [#128]: https://github.com/cosmos/ibc-rs/issues/128
 [#127]: https://github.com/cosmos/ibc-rs/issues/127
-[#165]: https://github.com/informalsystems/hermes/issues/165
+[#165]: https://github.com/soohoio/hermes/issues/165
 [#121]: https://github.com/cosmos/ibc-rs/issues/121
-[#205]: https://github.com/informalsystems/hermes/issues/205
-[#206]: https://github.com/informalsystems/hermes/issues/206
-[#207]: https://github.com/informalsystems/hermes/issues/207
+[#205]: https://github.com/soohoio/hermes/issues/205
+[#206]: https://github.com/soohoio/hermes/issues/206
+[#207]: https://github.com/soohoio/hermes/issues/207
 [#117]: https://github.com/cosmos/ibc-rs/issues/117
 [#116]: https://github.com/cosmos/ibc-rs/issues/116
-[#217]: https://github.com/informalsystems/hermes/issues/217
+[#217]: https://github.com/soohoio/hermes/issues/217
 [#115]: https://github.com/cosmos/ibc-rs/issues/115
 [#114]: https://github.com/cosmos/ibc-rs/issues/114
-[#223]: https://github.com/informalsystems/hermes/issues/223
-[#226]: https://github.com/informalsystems/hermes/issues/226
-[#229]: https://github.com/informalsystems/hermes/issues/229
-[#231]: https://github.com/informalsystems/hermes/issues/231
+[#223]: https://github.com/soohoio/hermes/issues/223
+[#226]: https://github.com/soohoio/hermes/issues/226
+[#229]: https://github.com/soohoio/hermes/issues/229
+[#231]: https://github.com/soohoio/hermes/issues/231
 [#113]: https://github.com/cosmos/ibc-rs/issues/113
-[#234]: https://github.com/informalsystems/hermes/issues/234
-[#237]: https://github.com/informalsystems/hermes/issues/237
-[#241]: https://github.com/informalsystems/hermes/issues/241
-[#243]: https://github.com/informalsystems/hermes/issues/243
-[#245]: https://github.com/informalsystems/hermes/issues/245
-[#249]: https://github.com/informalsystems/hermes/issues/249
+[#234]: https://github.com/soohoio/hermes/issues/234
+[#237]: https://github.com/soohoio/hermes/issues/237
+[#241]: https://github.com/soohoio/hermes/issues/241
+[#243]: https://github.com/soohoio/hermes/issues/243
+[#245]: https://github.com/soohoio/hermes/issues/245
+[#249]: https://github.com/soohoio/hermes/issues/249
 [#112]: https://github.com/cosmos/ibc-rs/issues/112
 [#111]: https://github.com/cosmos/ibc-rs/issues/111
 [#110]: https://github.com/cosmos/ibc-rs/issues/110
-[#273]: https://github.com/informalsystems/hermes/issues/273
+[#273]: https://github.com/soohoio/hermes/issues/273
 [#109]: https://github.com/cosmos/ibc-rs/issues/109
-[#278]: https://github.com/informalsystems/hermes/issues/278
-[#282]: https://github.com/informalsystems/hermes/issues/282
-[#284]: https://github.com/informalsystems/hermes/issues/284
-[#286]: https://github.com/informalsystems/hermes/issues/286
-[#293]: https://github.com/informalsystems/hermes/issues/293
-[#295]: https://github.com/informalsystems/hermes/issues/295
-[#296]: https://github.com/informalsystems/hermes/issues/296
-[#297]: https://github.com/informalsystems/hermes/issues/297
-[#300]: https://github.com/informalsystems/hermes/issues/300
+[#278]: https://github.com/soohoio/hermes/issues/278
+[#282]: https://github.com/soohoio/hermes/issues/282
+[#284]: https://github.com/soohoio/hermes/issues/284
+[#286]: https://github.com/soohoio/hermes/issues/286
+[#293]: https://github.com/soohoio/hermes/issues/293
+[#295]: https://github.com/soohoio/hermes/issues/295
+[#296]: https://github.com/soohoio/hermes/issues/296
+[#297]: https://github.com/soohoio/hermes/issues/297
+[#300]: https://github.com/soohoio/hermes/issues/300
 [#108]: https://github.com/cosmos/ibc-rs/issues/108
 [#106]: https://github.com/cosmos/ibc-rs/issues/106
-[ibc-proto]: https://github.com/cosmos/ibc-proto-rs
-[disclosure-log]: https://github.com/informalsystems/hermes/blob/master/docs/disclosure-log.md
-[spec/connection-handshake]: https://github.com/informalsystems/hermes/tree/master/docs/spec/connection-handshake
-[ibc-relayer]: https://github.com/informalsystems/hermes/tree/master/crates/relayer
+[ibc-proto]: https://github.com/soohoio/ibc-proto-rs
+[disclosure-log]: https://github.com/soohoio/hermes/blob/master/docs/disclosure-log.md
+[spec/connection-handshake]: https://github.com/soohoio/hermes/tree/master/docs/spec/connection-handshake
+[ibc-relayer]: https://github.com/soohoio/hermes/tree/master/crates/relayer
 
 ## v0.0.3
 *September 1, 2020*
@@ -2703,28 +2703,28 @@ Other highlights:
 ### BUG FIXES:
 - [ibc/ics24] Identifiers limit update according to ICS specs ([#168])
 
-[ibc/relayer-spec]: https://github.com/informalsystems/hermes/blob/master/docs/spec/relayer/Relayer.md
-[#84]: https://github.com/informalsystems/hermes/issues/84
-[architecture/ADR-001]: https://github.com/informalsystems/hermes/blob/master/docs/architecture/adr-001-repo.md
-[#1]: https://github.com/informalsystems/hermes/issues/1
-[contributing]: https://github.com/informalsystems/hermes/blob/master/CONTRIBUTING.md
-[#195]: https://github.com/informalsystems/hermes/pull/195
+[ibc/relayer-spec]: https://github.com/soohoio/hermes/blob/master/docs/spec/relayer/Relayer.md
+[#84]: https://github.com/soohoio/hermes/issues/84
+[architecture/ADR-001]: https://github.com/soohoio/hermes/blob/master/docs/architecture/adr-001-repo.md
+[#1]: https://github.com/soohoio/hermes/issues/1
+[contributing]: https://github.com/soohoio/hermes/blob/master/CONTRIBUTING.md
+[#195]: https://github.com/soohoio/hermes/pull/195
 [ibc]: https://github.com/cosmos/ibc-rs/tree/main/crates/ibc
-[#198]: https://github.com/informalsystems/hermes/issues/198
+[#198]: https://github.com/soohoio/hermes/issues/198
 [ibc/ics02]: https://github.com/cosmos/ibc-rs/tree/main/crates/ibc/src/core/ics02_client
 [#123]: https://github.com/cosmos/ibc-rs/issues/123
 [ibc/ics03]: https://github.com/cosmos/ibc-rs/tree/main/crates/ibc/src/core/ics03_connection
 [#119]: https://github.com/cosmos/ibc-rs/issues/119
 [ibc/ics04]: https://github.com/cosmos/ibc-rs/tree/main/crates/ibc/src/core/ics04_channel
 [#120]: https://github.com/cosmos/ibc-rs/issues/120
-[ibc-relayer-cli]: https://github.com/informalsystems/hermes/tree/master/crates/relayer-cli
-[architecture/FSM-1]: https://github.com/informalsystems/hermes/blob/v0.1.0/docs/architecture/fsm-async-connection.md
-[#122]: https://github.com/informalsystems/hermes/issues/122
-[architecture/ADR-003]: https://github.com/informalsystems/hermes/blob/master/docs/architecture/adr-003-handler-implementation.md
-[#119]: https://github.com/informalsystems/hermes/issues/119
+[ibc-relayer-cli]: https://github.com/soohoio/hermes/tree/master/crates/relayer-cli
+[architecture/FSM-1]: https://github.com/soohoio/hermes/blob/v0.1.0/docs/architecture/fsm-async-connection.md
+[#122]: https://github.com/soohoio/hermes/issues/122
+[architecture/ADR-003]: https://github.com/soohoio/hermes/blob/master/docs/architecture/adr-003-handler-implementation.md
+[#119]: https://github.com/soohoio/hermes/issues/119
 [#118]: https://github.com/cosmos/ibc-rs/issues/118
 [ibc/ics24]: https://github.com/cosmos/ibc-rs/tree/main/crates/ibc/src/core/ics24_host
-[#168]: https://github.com/informalsystems/hermes/issues/168
+[#168]: https://github.com/soohoio/hermes/issues/168
 [ibc/ics07]: https://github.com/cosmos/ibc-rs/tree/main/crates/ibc/src/clients/ics07_tendermint
 
 ## v0.0.2
@@ -2742,33 +2742,33 @@ the latest state of development towards the Cosmos-SDK Stargate release.
 
 - [ibc|ibc-relayer] Refactor queries, paths, and Chain trait to reduce code and use
   protobuf instead of Amino.
-        [\#152](https://github.com/informalsystems/hermes/pull/152),
-        [\#174](https://github.com/informalsystems/hermes/pull/174),
-        [\#155](https://github.com/informalsystems/hermes/pull/155)
-- [repo] Moved relayer/cli to relayer-cli, relayer/relay to relayer. [\#183](https://github.com/informalsystems/hermes/pull/183)
+        [\#152](https://github.com/soohoio/hermes/pull/152),
+        [\#174](https://github.com/soohoio/hermes/pull/174),
+        [\#155](https://github.com/soohoio/hermes/pull/155)
+- [repo] Moved relayer/cli to relayer-cli, relayer/relay to relayer. [\#183](https://github.com/soohoio/hermes/pull/183)
 
 ### FEATURES:
 
-- [ibc-relayer] Query connections given client id. [\#169](https://github.com/informalsystems/hermes/pull/169)
-- [ibc-relayer] Query connection given connection id. [\#136](https://github.com/informalsystems/hermes/pull/136)
-- [ibc-relayer] Query channel given channel id and port [\#163](https://github.com/informalsystems/hermes/pull/163)
-- [spec] Channel closing datagrams in TLA+ [\#141](https://github.com/informalsystems/hermes/pull/141)
+- [ibc-relayer] Query connections given client id. [\#169](https://github.com/soohoio/hermes/pull/169)
+- [ibc-relayer] Query connection given connection id. [\#136](https://github.com/soohoio/hermes/pull/136)
+- [ibc-relayer] Query channel given channel id and port [\#163](https://github.com/soohoio/hermes/pull/163)
+- [spec] Channel closing datagrams in TLA+ [\#141](https://github.com/soohoio/hermes/pull/141)
 
 ### IMPROVEMENTS:
 
 - [ci] Framework (scripts and Github Actions) for integration testing the relayer queries against
     the Cosmos-SDK's `simd` binary with prepopulated IBC state in the genesis
-        [\#140](https://github.com/informalsystems/hermes/pull/140),
-        [\#184](https://github.com/informalsystems/hermes/pull/184)
-- [ibc-relayer|ibc] Implemented better Raw type handling. [\#156](https://github.com/informalsystems/hermes/pull/156)
-- [repo] Add rust-toolchain file. [\#154](https://github.com/informalsystems/hermes/pull/154)
+        [\#140](https://github.com/soohoio/hermes/pull/140),
+        [\#184](https://github.com/soohoio/hermes/pull/184)
+- [ibc-relayer|ibc] Implemented better Raw type handling. [\#156](https://github.com/soohoio/hermes/pull/156)
+- [repo] Add rust-toolchain file. [\#154](https://github.com/soohoio/hermes/pull/154)
 
 ### BUG FIXES:
 
-- [ibc] Fixed the identifiers limits according to updated ics spec. [\#189](https://github.com/informalsystems/hermes/pull/189)
-- [ibc/relayer] Remove some warnings triggered during compilation due to dependency specification. [\#132](https://github.com/informalsystems/hermes/pull/132)
-- [ibc] Fix nightly runs. [\#161](https://github.com/informalsystems/hermes/pull/161)
-- [repo] Fix for incomplete licence terms. [\#153](https://github.com/informalsystems/hermes/pull/153)
+- [ibc] Fixed the identifiers limits according to updated ics spec. [\#189](https://github.com/soohoio/hermes/pull/189)
+- [ibc/relayer] Remove some warnings triggered during compilation due to dependency specification. [\#132](https://github.com/soohoio/hermes/pull/132)
+- [ibc] Fix nightly runs. [\#161](https://github.com/soohoio/hermes/pull/161)
+- [repo] Fix for incomplete licence terms. [\#153](https://github.com/soohoio/hermes/pull/153)
 
 ## 0.0.1
 
